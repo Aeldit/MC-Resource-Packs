@@ -14,15 +14,5 @@
 >
 >![github_issues](https://img.shields.io/github/issues/Raphoulfifou/Smooth-GUI?color=red&style=for-the-badge&logo=github) ![github_pull_requests](https://img.shields.io/github/issues-pr/Raphoulfifou/Smooth-GUI?style=for-the-badge&logo=github)
 
-![example_image](https://raw.githubusercontent.com/Raphoulfifou/Smooth-GUI/main/images/Main_Menu.png)
-
-#### ✔️ List of current aliases
-
-    - /bed -> b
-    - /surface -> s
-    - /killgrounditems -> kgi
-
-> ### ❗ Important
->
->If you are not using this mod on client but only on server side, download the resource pack for messages translations (
-> Cyan 1.1X.x located in this mod's github repository)
+![dark_banner](https://github.com/Raphoulfifou/Smooth-GUI/blob/main/images/Dark_banner.png?raw=true)
+![example_image](https://github.com/Raphoulfifou/Smooth-GUI/blob/main/images/Main_Menu.png?raw=true)
