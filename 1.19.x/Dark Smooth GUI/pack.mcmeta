@@ -1,0 +1,19 @@
+{
+	"pack": {
+		"pack_format": 9,
+		"description": [
+			{
+				"text": "Dark Smooth GUI",
+				"color": "gold"
+			},
+			{
+				"text": " MC 1.19.x",
+				"color": "dark_aqua"
+			},
+			{
+				"text": "\n[By Raphoulfifou]",
+				"color": "dark_red"
+			}
+		]
+	}
+}
