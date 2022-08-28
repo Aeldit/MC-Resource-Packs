@@ -13,7 +13,12 @@
 >
 >![github_issues](https://img.shields.io/github/issues/Raphoulfifou/Smooth-GUI?color=red&style=for-the-badge&logo=github) ![github_pull_requests](https://img.shields.io/github/issues-pr/Raphoulfifou/Smooth-GUI?style=for-the-badge&logo=github)
 
-#
-
+***
+\
 ![dark_banner](https://github.com/Raphoulfifou/Smooth-GUI/blob/main/images/dark_banner.png?raw=true)
-![example_image](https://github.com/Raphoulfifou/Smooth-GUI/blob/main/images/Main_Menu.png?raw=true)
+![example_image](https://github.com/Raphoulfifou/Smooth-GUI/blob/main/images/main_menu_dark.png?raw=true)
+
+***
+\
+![light_banner](https://github.com/Raphoulfifou/Smooth-GUI/blob/main/images/light_banner.png?raw=true)
+![example_image](https://github.com/Raphoulfifou/Smooth-GUI/blob/main/images/main_menu_light.png?raw=true)
