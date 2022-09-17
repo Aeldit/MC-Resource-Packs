@@ -1,0 +1,19 @@
+{
+  "pack": {
+    "pack_format": 7,
+    "description": [
+      {
+        "text": "(Compliance)",
+        "color": "gold"
+      },
+      {
+        "text": " CTM 64x 1.17.x",
+        "color": "gray"
+      },
+      {
+        "text": "\n[By Raphoulfifou]",
+        "color": "dark_red"
+      }
+    ]
+  }
+}
