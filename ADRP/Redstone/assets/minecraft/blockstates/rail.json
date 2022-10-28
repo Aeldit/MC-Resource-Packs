@@ -1,18 +1,19 @@
 {
     "variants": {
         "shape=ascending_east": {
-            "model": "minecraft:block/rail_raised_ne",
+            "model": "minecraft:block/rails/rail_raised",
             "y": 90
         },
         "shape=ascending_north": {
-            "model": "minecraft:block/rail_raised_ne"
+            "model": "minecraft:block/rails/rail_raised"
         },
         "shape=ascending_south": {
-            "model": "minecraft:block/rail_raised_sw"
+            "model": "minecraft:block/rails/rail_raised",
+            "y": 180
         },
         "shape=ascending_west": {
-            "model": "minecraft:block/rail_raised_sw",
-            "y": 90
+            "model": "minecraft:block/rails/rail_raised",
+            "y": 270
         },
         "shape=east_west": {
             "model": "minecraft:block/rails/rail",
