@@ -11,6 +11,8 @@
 |       `1.18.x`        |     ✅     |
 |       `1.19.x`        |     ✅     |
 
+> Adds connected textures to the game (works with Optifine and Continuity)
+
 ***
 \
 ![img_ctm][def_img_ctm]
@@ -27,6 +29,8 @@
 |       `1.17.x`        |     ✅     |
 |       `1.18.x`        |     ✅     |
 |       `1.19.x`        |     ✅     |
+
+> Adds connected textures to the game but using Faithful textures (works with Optifine and Continuity)
 
 ***
 \
@@ -46,6 +50,8 @@
 |       `1.18.x`        |     ✅     |
 |       `1.19.x`        |     ✅     |
 
+> Adds a smooth dark GUI to every container and screen in the game
+
 ![example_image][def_img_dark_bg]
 
 ***
@@ -60,6 +66,8 @@
 |       `1.17.x`        |     ✅     |
 |       `1.18.x`        |     ✅     |
 |       `1.19.x`        |     ✅     |
+
+> Adds a smooth light GUI to every container and screen in the game
 
 ![example_image][def_img_light_bg]
 
