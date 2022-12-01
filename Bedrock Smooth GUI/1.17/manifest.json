@@ -1,0 +1,29 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "§3Adds a smooth gui to Minecraft Bedrock\nYou can choose between §6Dark §3and §6Light GUI\n§c[by Raphoulfifou]",
+        "name": "Bedrock Smooth GUI",
+        "uuid": "49fdccba-e31a-11eb-9454-9bc2e3e49ca0",
+        "version": [0, 0, 2],
+        "min_engine_version": [ 1, 17, 2 ]
+    },
+    "modules": [
+        {
+            "type": "resources",
+            "uuid": "4eecb22c-e31a-11eb-b89c-fb31db1266b5",
+            "version": [0, 0, 2]
+        }
+    ],
+   "subpacks": [ 
+      {
+		"folder_name": "dark",
+		"name": "§4Dark Smooth GUI",
+		"memory_tier": 1
+      },
+	  {
+		"folder_name": "light",
+		"name": "§cLight Smooth GUI",
+		"memory_tier": 1
+      }
+	]
+}
