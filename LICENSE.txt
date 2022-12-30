@@ -1,6 +1,6 @@
 All Rights Reserved
 
-Copyright (c) ${CTM_OF_Fabric.inceptionYear} ${Raphoulfifou}
+Copyright (c) ${CTM_OF_Fabric.inceptionYear} ${Aeldit}
 
 Created by Techcable (the license)
 
