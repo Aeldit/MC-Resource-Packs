@@ -13,6 +13,12 @@ void main()
     {
         discard;
     }
+    
+    /* Sodium checkbox and border colour */
+    if(color == vec4(0.5803921568627451, 0.8941176470588236, 0.8274509803921568, 1))
+    {
+        color.rgb = vec3(1, 0, 0);
+    }
 
     /* Tooltip background color */
     if (color.r == 16/255.0 && color.g == 0/255.0 && color.b == 16/255.0 )
