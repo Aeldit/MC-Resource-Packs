@@ -52,6 +52,12 @@
 
 ![example_image][def_img_dark_bg]
 
+|   Mods   | ModMenu | ItemSwapper |
+|:--------:|:-------:|:-----------:|
+| `1.17.x` |    ❌   |     ❌     |
+| `1.18.x` |    ❌   |     ❌     |
+| `1.19.x` |    ✅   |     ✅    |
+
 ***
 \
 ![light_banner][def_img_light_banner]
