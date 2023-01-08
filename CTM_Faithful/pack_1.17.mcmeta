@@ -1,14 +1,14 @@
 {
   "pack": {
-    "pack_format": 8,
+    "pack_format": 7,
     "description": [
+      {
+        "text": " CTM 64x 1.17.x",
+        "color": "gray"
+      },
       {
         "text": "(for Faithful)",
         "color": "gold"
-      },
-      {
-        "text": " CTM 64x 1.18.x",
-        "color": "gray"
       },
       {
         "text": "\n[By Aeldit]",
