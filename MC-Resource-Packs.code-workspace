@@ -4,16 +4,10 @@
 			"path": "."
 		},
 		{
-			"path": "../../../AppData/Roaming/PrismLauncher/instances/1.19.2/.minecraft/resourcepacks/CTM OF Continuity"
-		},
-		{
-			"path": "../../../AppData/Roaming/PrismLauncher/instances/1.19.2/.minecraft/resourcepacks/Dark Smooth GUI"
-		},
-		{
-			"path": "../../../AppData/Roaming/PrismLauncher/instances/1.19.2/.minecraft/resourcepacks/ADRP Redstone"
-		},
-		{
 			"path": "../../../AppData/Local/Packages/Microsoft.MinecraftUWP_8wekyb3d8bbwe/LocalState/games/com.mojang/development_resource_packs"
+		},
+		{
+			"path": "../../../AppData/Roaming/PrismLauncher/instances/1.19.3/.minecraft/resourcepacks/Dark Smooth GUI"
 		}
 	],
 	"settings": {}
