@@ -9,6 +9,7 @@
 |       `1.17.x`        |     ✅     |
 |       `1.18.x`        |     ✅     |
 |       `1.19.x`        |     ✅     |
+|       `1.19.3`        |     ✅     |
 
 > Adds connected textures to the game (works with Optifine and Continuity)
 
