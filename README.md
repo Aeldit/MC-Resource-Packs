@@ -12,11 +12,11 @@
 
 > Adds connected textures to the game (works with Optifine and Continuity)
 
-List of current textures :
+Blocks done :
 
-- [x] Diamond block
-- [x] Gold block
-- [x] Iron block
+> The redstone lamp and the copper blocks are included in all their respective states (on/off, waxed, ...)
+
+![batch_items_img](images/batch_items.png)
 
 ***
 
