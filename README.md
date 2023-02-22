@@ -12,6 +12,12 @@
 
 > Adds connected textures to the game (works with Optifine and Continuity)
 
+List of current textures :
+
+- [x] Diamond block
+- [x] Gold block
+- [x] Iron block
+
 ***
 
 ## Here are some examples of what this pack does
