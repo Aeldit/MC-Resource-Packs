@@ -2,7 +2,7 @@
 
 ![dark_banner](../images/dark_banner_small.png)
 
-[![gimp](https://img.shields.io/badge/-Made%20with%20GIMP-5C5543?style=for-the-badge&logo=gimp&logoColor=white)](https://www.gimp.org/) [![modrinth downloads dark](https://img.shields.io/modrinth/dt/Dark-Smooth-GUI?color=black&label=Dark%20Smooth%20GUI&logo=modrinth&style=for-the-badge)](https://modrinth.com/resourcepack/dark-smooth-gui)
+[![gimp](https://img.shields.io/badge/-Made%20with%20GIMP-5C5543?style=for-the-badge&logo=gimp&logoColor=white)](https://www.gimp.org/) [![modrinth downloads dark](https://img.shields.io/modrinth/dt/Dark-Smooth-GUI?color=black&label=Dark%20Smooth%20GUI&logo=modrinth&style=for-the-badge&labelColor=black)](https://modrinth.com/resourcepack/dark-smooth-gui)
 
 | Supported MC Version  | Up to date |
 |:---------------------:|:----------:|
