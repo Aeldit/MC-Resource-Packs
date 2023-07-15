@@ -1,5 +1,10 @@
 # This is the documentation for my packs
 
+> If you find an issue with any of the packs, open an issue on the github repo of the
+> resource pack of go on the discord and create a post in issues and suggestion
+>
+>[![github_issues][def_issues]](https://github.com/Aeldit/MC-Resource-Packs/issues) [![discord_badge](https://img.shields.io/discord/750243612473819188?color=7289da&label=DISCORD&logo=discord&logoColor=7289da&style=for-the-badge)](https://discord.gg/PcYPpqzhKS)
+
 ![ctm_banner][def_img_ctm_banner]
 
 ![modrinth_downloads][def__download_modrinth_ctm]
@@ -92,13 +97,7 @@ Blocks done :
 ***
 ***
 
-> If you have ideas you want to see added in one of these packs, you can make an issue explaining what you want to add, or a pull request if you can add it yourself (on the github page of the pack)
->
->![github_issues][def_issues] ![github_pull_requests][def_pr]
-
 [def_issues]: https://img.shields.io/github/issues/Aeldit/MC-REsource-Packs?color=red&style=for-the-badge&logo=github
-
-[def_pr]: https://img.shields.io/github/issues-pr/Aeldit/MC-REsource-Packs?style=for-the-badge&logo=github
 
 [def_img_ctm_banner]: images/banner_ctm_small.png
 
