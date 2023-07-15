@@ -11,7 +11,7 @@
 |       `1.17.x`        |     ✅     |
 |       `1.18.x`        |     ✅     |
 |       `1.19.x`        |     ✅     |
-|       `1.20.x`        |     ✅     |
+|       `1.20.x`        |     ❌     |
 
 ![example_image](../images/main_menu_light.png)
 
