@@ -1,5 +1,5 @@
-============================================================================================================
-Made by Aeldit (https://github.com/Aeldit)
+==============================================================================================================================
+Resource pack made by Aeldit (https://github.com/Aeldit). Do not sell or upload it anywhere.
 
-Do not sell or upload anywhere. Use this link instead : https://modrinth.com/resourcepack/ctm-of-fabric
-============================================================================================================
+If you want people to use it, simply send them this link : https://modrinth.com/resourcepack/ctm-of-fabric
+==============================================================================================================================
