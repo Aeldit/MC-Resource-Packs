@@ -9,7 +9,7 @@
 |       `1.17.x`        |     ✅     |
 |       `1.18.x`        |     ✅     |
 |       `1.19.x`        |     ✅     |
-|       `1.19.3`        |     ✅     |
+|       `1.20.x`        |     ✅     |
 
 > Adds connected textures to the game (works with Optifine and Continuity)
 
@@ -40,6 +40,7 @@ Blocks done :
 |       `1.17.x`        |     ✅     |
 |       `1.18.x`        |     ✅     |
 |       `1.19.x`        |     ✅     |
+|       `1.20.x`        |     ✅     |
 
 > Adds connected textures to the game but using Faithful textures (works with Optifine and Continuity)
 
@@ -59,6 +60,7 @@ Blocks done :
 |       `1.17.x`        |     ✅     |
 |       `1.18.x`        |     ✅     |
 |       `1.19.x`        |     ✅     |
+|       `1.20.x`        |     ✅     |
 
 > Adds a smooth dark GUI to every container and screen in the game
 
@@ -68,7 +70,8 @@ Blocks done :
 |:--------:|:-------:|:-----------:|
 | `1.17.x` |    ❌   |     ❌     |
 | `1.18.x` |    ❌   |     ❌     |
-| `1.19.x` |    ✅   |     ✅    |
+| `1.19.x` |    ✅   |     ✅     |
+| `1.20.x` |    ✅   |     ✅     |
 
 ***
 \
