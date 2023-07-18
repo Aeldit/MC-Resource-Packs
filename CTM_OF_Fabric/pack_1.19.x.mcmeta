@@ -1,13 +1,13 @@
 {
 	"pack": {
-		"pack_format": 12,
+		"pack_format": 13,
 		"description": [
 			{
 				"text": "CTM OF-Fabric",
 				"color": "gold"
 			},
 			{
-				"text": " MC 1.19.3",
+				"text": " MC 1.19.x",
 				"color": "dark_aqua"
 			},
 			{

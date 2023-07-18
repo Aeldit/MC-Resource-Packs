@@ -16,6 +16,8 @@
 ## Blocks done
 
 > The redstone lamp and the copper blocks are included in all their respective states (on/off, waxed, ...)
+>
+> All the log/stem types are included
 
 ![batch_items_img](../images/batch_ctm.png)
 
