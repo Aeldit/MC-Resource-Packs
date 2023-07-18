@@ -19,7 +19,7 @@
 >
 > All the log/stem types are included
 
-![batch_items_img](../images/batch_ctm.png)
+![batch_items_img](../images/batch_ctm.png) ____ ![batch_items_img_2](../images/batch_ctm_2.png)
 
 ***
 
