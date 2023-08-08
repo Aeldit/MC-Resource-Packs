@@ -4,6 +4,11 @@
 
 [![gimp](https://img.shields.io/badge/-Made%20with%20GIMP-5C5543?style=for-the-badge&logo=gimp&logoColor=white)](https://www.gimp.org/) [![modrinth_downloads](https://img.shields.io/modrinth/dt/ctm-of-fabric?color=dc8900&label=ctm%20optifine%20fabric&logo=modrinth&style=for-the-badge)](https://modrinth.com/resourcepack/ctm-of-fabric)
 
+Also check my other CTM packs (click on the badges to follow the links) :
+
+[![ctm_faithful](https://img.shields.io/badge/-CTM%20Faithful-a93f00?style=for-the-badge&logo=modrinth)](https://modrinth.com/resourcepack/ctm-faithful)
+[![ctm_create](https://img.shields.io/badge/-CTM%20Create%20(not%20online%20yet)-a93f00?style=for-the-badge&logo=modrinth)](https://modrinth.com/resourcepack/ctm-create)
+
 ## Adds connected textures to the game (works with Optifine and Continuity)
 
 | Supported MC Version  | Up to date |

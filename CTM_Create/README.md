@@ -4,7 +4,7 @@
 
 [![gimp](https://img.shields.io/badge/-Made%20with%20GIMP-5C5543?style=for-the-badge&logo=gimp&logoColor=white)](https://www.gimp.org/) [![modrinth_downloads](https://img.shields.io/modrinth/dt/ctm-create?color=dc8900&label=ctm%20create&logo=modrinth&style=for-the-badge)](https://modrinth.com/resourcepack/ctm-create)
 
-## Adds connected textures to the game (works with Optifine and Continuity)
+## Adds connected textures with the textures of the Create mod (Continuity or Optifine are required for the resource pack to work)
 
 | Supported MC Version  | Up to date |
 |:---------------------:|:----------:|
