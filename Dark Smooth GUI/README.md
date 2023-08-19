@@ -28,6 +28,6 @@
 >
 >[![github_issues](https://img.shields.io/github/issues/Aeldit/MC-REsource-Packs?color=red&style=for-the-badge&logo=github)](https://github.com/Aeldit/MC-Resource-Packs/issues)
 >
-> I'd you have a suggestion, go on the discord and create a post in 🖍️-suggestion
+> If you have a suggestion, you can go on my discord server and create a post in 🖍️-suggestion
 >
 > [![discord_badge](https://img.shields.io/discord/750243612473819188?color=7289da&label=DISCORD&logo=discord&logoColor=7289da&style=for-the-badge)](https://discord.gg/PcYPpqzhKS)
