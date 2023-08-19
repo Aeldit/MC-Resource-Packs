@@ -1,9 +1,12 @@
 # This is the documentation for my packs
 
-> If you find an issue with any of the packs, open an issue on the Github repo of the
-> resource pack of go on the discord and create a post in issues and suggestion
+> If you find an issue with any of these packs, please open an issue on this Github repo
 >
->[![github_issues](https://img.shields.io/github/issues/Aeldit/MC-REsource-Packs?color=red&style=for-the-badge&logo=github)](https://github.com/Aeldit/MC-Resource-Packs/issues) [![discord_badge](https://img.shields.io/discord/750243612473819188?color=7289da&label=DISCORD&logo=discord&logoColor=7289da&style=for-the-badge)](https://discord.gg/PcYPpqzhKS)
+>[![github_issues](https://img.shields.io/github/issues/Aeldit/MC-REsource-Packs?color=red&style=for-the-badge&logo=github)](https://github.com/Aeldit/MC-Resource-Packs/issues)
+>
+> I'd you have a suggestion, go on the discord and create a post in 🖍️-suggestion
+>
+> [![discord_badge](https://img.shields.io/discord/750243612473819188?color=7289da&label=DISCORD&logo=discord&logoColor=7289da&style=for-the-badge)](https://discord.gg/PcYPpqzhKS)
 
 ## This repository contains all of my Resource Packs
 
