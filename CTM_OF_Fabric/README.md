@@ -2,7 +2,7 @@
 
 ![ctm_banner](../images/banner_ctm_small.png)
 
-[![gimp](https://img.shields.io/badge/-Made%20with%20GIMP-5C5543?style=for-the-badge&logo=gimp&logoColor=white)](https://www.gimp.org/) [![modrinth_downloads](https://img.shields.io/modrinth/dt/ctm-of-fabric?color=dc8900&label=ctm%20optifine%20fabric&logo=modrinth&style=for-the-badge)](https://modrinth.com/resourcepack/ctm-of-fabric)
+[![gimp](https://img.shields.io/badge/-Made%20with%20GIMP-5C5543?style=for-the-badge&logo=gimp&logoColor=white)](https://www.gimp.org/) [![modrinth_downloads](https://img.shields.io/modrinth/dt/ctm-of-fabric?color=c97e00&labelColor=c97e00&label=ctm%20optifine%20fabric&logo=modrinth&style=for-the-badge)](https://modrinth.com/resourcepack/ctm-of-fabric)
 
 Also check my other CTM packs (click on the badges to follow the links) :
 

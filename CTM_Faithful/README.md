@@ -2,7 +2,7 @@
 
 ![ctm_banner](../images/banner_ctm_faithful_small.png)
 
-[![gimp](https://img.shields.io/badge/-Made%20with%20GIMP-5C5543?style=for-the-badge&logo=gimp&logoColor=white)](https://www.gimp.org/) [![modrinth_downloads](https://img.shields.io/modrinth/dt/ctm-faithful?color=dc8900&label=ctm%20faithful&logo=modrinth&style=for-the-badge)](https://modrinth.com/resourcepack/ctm-faithful)
+[![gimp](https://img.shields.io/badge/-Made%20with%20GIMP-5C5543?style=for-the-badge&logo=gimp&logoColor=white)](https://www.gimp.org/) [![modrinth_downloads](https://img.shields.io/modrinth/dt/ctm-faithful?color=c97e00&labelColor=c97e00&label=ctm%20faithful&logo=modrinth&style=for-the-badge)](https://modrinth.com/resourcepack/ctm-faithful)
 
 ## Adds connected textures to the game but with Faithful textures (works with Optifine and Continuity)
 

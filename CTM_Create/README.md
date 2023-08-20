@@ -2,7 +2,7 @@
 
 ![ctm_banner](../images/banner_ctm_create_small.png)
 
-[![gimp](https://img.shields.io/badge/-Made%20with%20GIMP-5C5543?style=for-the-badge&logo=gimp&logoColor=white)](https://www.gimp.org/) [![modrinth_downloads](https://img.shields.io/modrinth/dt/ctm-create?color=dc8900&label=ctm%20create&logo=modrinth&style=for-the-badge)](https://modrinth.com/resourcepack/ctm-create)
+[![gimp](https://img.shields.io/badge/-Made%20with%20GIMP-5C5543?style=for-the-badge&logo=gimp&logoColor=white)](https://www.gimp.org/) [![modrinth_downloads](https://img.shields.io/modrinth/dt/ctm-create?color=c97e00&labelColor=c97e00&label=ctm%20create&logo=modrinth&style=for-the-badge)](https://modrinth.com/resourcepack/ctm-create)
 
 ## Adds connected textures with the textures of the Create mod (Continuity or Optifine are required for the resource pack to work)
 
