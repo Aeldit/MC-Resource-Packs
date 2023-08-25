@@ -17,7 +17,7 @@
 
 > If you find an issue with this pack, please open an issue on the Github repo of this resource pack
 >
->[![github_issues](https://img.shields.io/github/issues/Aeldit/MC-REsource-Packs?color=red&style=for-the-badge&logo=github)](https://github.com/Aeldit/MC-Resource-Packs/issues)
+>[![github_issues](https://img.shields.io/github/issues/Aeldit/MC-Resource-Packs?color=red&style=for-the-badge&logo=github)](https://github.com/Aeldit/MC-Resource-Packs/issues)
 >
 > If you have a suggestion, you can go on my discord server and create a post in 🖍️-suggestion
 >
