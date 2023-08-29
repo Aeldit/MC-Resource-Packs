@@ -17,7 +17,7 @@ Also check my other CTM packs (click on the badges to follow the links) :
 |       `1.19.2`        |     ✅     |
 |       `1.19.3`        |     ❌     |
 |       `1.19.4`        |     ❌     |
-|       `1.20.x`        |     ❌     |
+|       `1.20.x`        |     ✅     |
 
 ## Blocks done
 
