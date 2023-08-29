@@ -14,6 +14,9 @@
 		},
 		{
 			"path": "../../../AppData/Roaming/PrismLauncher/instances/1.19.2/.minecraft/resourcepacks/CTM Create"
+		},
+		{
+			"path": "../../../AppData/Roaming/PrismLauncher/instances/1.20/.minecraft/resourcepacks/Light Smooth GUI"
 		}
 	],
 	"settings": {}

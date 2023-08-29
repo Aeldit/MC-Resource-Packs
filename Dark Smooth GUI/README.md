@@ -1,6 +1,7 @@
 ![dark_banner](../images/dark_banner.png)
 
-[![gimp](https://img.shields.io/badge/-Made%20with%20GIMP-5C5543?style=for-the-badge&logo=gimp&logoColor=white)](https://www.gimp.org/) [![modrinth downloads dark](https://img.shields.io/modrinth/dt/Dark-Smooth-GUI?color=black&label=Dark%20Smooth%20GUI&logo=modrinth&style=for-the-badge&labelColor=black)](https://modrinth.com/resourcepack/dark-smooth-gui)
+[![gimp_badge_use](https://raw.githubusercontent.com/Aeldit/Aeldit/e86a5a31fb483f7821a90ccc169540c3ff58ca2e/images/gimp-cozy.svg)](https://www.gimp.org/)
+[![dark_gui_cozy](https://raw.githubusercontent.com/Aeldit/Aeldit/52eb60c8c1220593ea859bcd59a5b0a2d8f2cf7a/images/dark-gui-cozy.svg)](https://modrinth.com/resourcepack/dark-smooth-gui)
 
 | Supported MC Version  | Up to date |
 |:---------------------:|:----------:|
@@ -28,6 +29,6 @@
 >
 >[![github_issues](https://img.shields.io/github/issues/Aeldit/MC-Resource-Packs?color=red&style=for-the-badge&logo=github)](https://github.com/Aeldit/MC-Resource-Packs/issues)
 >
-> If you have a suggestion, you can go on my discord server and create a post in 🖍️-suggestion
+> If you have a suggestion, you can go on my discord server and create a post in 🗽-suggestions-forum
 >
 > [![discord_badge](https://img.shields.io/discord/750243612473819188?color=7289da&label=DISCORD&logo=discord&logoColor=7289da&style=for-the-badge)](https://discord.gg/PcYPpqzhKS)
