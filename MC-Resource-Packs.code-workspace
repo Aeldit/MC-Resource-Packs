@@ -17,6 +17,9 @@
 		},
 		{
 			"path": "../../../AppData/Roaming/PrismLauncher/instances/1.20/.minecraft/resourcepacks/Light Smooth GUI"
+		},
+		{
+			"path": "../../../AppData/Roaming/PrismLauncher/instances/1.20.1/.minecraft/resourcepacks/CTM Faithful 64x"
 		}
 	],
 	"settings": {}

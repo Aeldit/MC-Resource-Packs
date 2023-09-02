@@ -1,0 +1,9 @@
+0.2 :
+    ✏️ Added :
+    - Exposed Copper
+    - Weatherd Copper
+    - Waxed Exposed Copper
+    - Waxed Weatherd Copper
+
+    ❌ Removed :
+    - Sandstone and Red sandstone, as they were added by default in the Faithful pack
