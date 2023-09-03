@@ -19,7 +19,7 @@
 
 ***
 
-![example_image](../images/main_menu_light.png)
+![example_image](https://github.com/Aeldit/MC-Resource-Packs/blob/main/images/main_menu_light.png?raw=true)
 
 ***
 
