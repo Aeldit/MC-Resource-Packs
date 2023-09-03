@@ -2,9 +2,9 @@
 
 > If you find an issue with any of these packs, please open an issue on this Github repo
 >
->[![github_issues](https://img.shields.io/github/issues/Aeldit/MC-REsource-Packs?color=red&style=for-the-badge&logo=github)](https://github.com/Aeldit/MC-Resource-Packs/issues)
+>[![github_issues](https://img.shields.io/github/issues/Aeldit/MC-Resource-Packs?color=red&style=for-the-badge&logo=github)](https://github.com/Aeldit/MC-Resource-Packs/issues)
 >
-> I'd you have a suggestion, go on the discord and create a post in 🖍️-suggestion
+> I'd you have a suggestion, go on the discord and create a post in 🗽-suggestions-forum
 >
 > [![discord_badge](https://img.shields.io/discord/750243612473819188?color=7289da&label=DISCORD&logo=discord&logoColor=7289da&style=for-the-badge)](https://discord.gg/PcYPpqzhKS)
 
