@@ -18,11 +18,13 @@ out vec4 fragColor;
 void main()
 {
     vec4 color = texture(Sampler0, texCoord0) * vertexColor * ColorModulator;
+
     if (color.a < 0.1)
     {
         discard;
     }
 	
+    // Text color in inventory
 	if (vertexDistance > 800.0 && color.r > 0.2479 && color.r < 0.2481)
     {
         color = vec4(1.0, 1.0, 1.0, 1.0);
