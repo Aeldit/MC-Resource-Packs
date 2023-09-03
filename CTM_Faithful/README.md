@@ -1,7 +1,9 @@
-![ctm_banner](../images/banner_ctm_faithful_small.png)
+![ctm_banner](https://github.com/Aeldit/MC-Resource-Packs/blob/main/images/banner_ctm_faithful_small.png?raw=true)
 
 [![gimp_badge_use](https://raw.githubusercontent.com/Aeldit/Aeldit/e86a5a31fb483f7821a90ccc169540c3ff58ca2e/images/gimp-cozy.svg)](https://www.gimp.org/)
-![ct](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/requires/ct_vector.svg)
+[![continuity](https://raw.githubusercontent.com/Aeldit/Aeldit/b683fac4b97744f1a64dfde6f39624379e661095/images/requires-continuity-cozy.svg)](https://modrinth.com/mod/continuity)
+or
+[![optifine](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/requires/optifine_vector.svg)](https://optifine.net/home)
 
 Also check my other CTM packs (click on the badges to follow the links) :
 
@@ -14,38 +16,43 @@ Also check my other CTM packs (click on the badges to follow the links) :
 >
 > The pack is based on their textures so here is the link to comply with their license : <https://faithfulpack.net>
 
+<details>
+<summary>🎴 Show available versions</summary>
+
 | Supported MC Version  | Up to date |
 |:---------------------:|:----------:|
-|       `1.17.x`        |     ✅     |
-|       `1.18.x`        |     ✅     |
-|       `1.19.x`        |     ✅     |
-|       `1.20.x`        |     ✅     |
+|       1.17.x        |     ✅     |
+|       1.18.x        |     ✅     |
+|       1.19.x        |     ✅     |
+|       1.20.x        |     ✅     |
+
+</details>
 
 ## Blocks done
 
 > Copper blocks are present in both normal and waxed states
 
-![img_ctm](../images/batch_ctmf.png)
+![img_ctm](https://github.com/Aeldit/MC-Resource-Packs/blob/main/images/batch_ctmf.png?raw=true)
 
 ## Here are some visual examples of what this pack does
 
 > Left is what a 3x3 area of blocks looks like in vanilla, and right is with the texture pack
 
-![img_ctm_off](../images/iso_diamond_off_f.png)
-![img_ctm_on](../images/iso_diamond_on_f.png)
+![img_ctm_off](https://github.com/Aeldit/MC-Resource-Packs/blob/main/images/iso_diamond_off_f.png?raw=true)
+![img_ctm_on](https://github.com/Aeldit/MC-Resource-Packs/blob/main/images/iso_diamond_on_f.png?raw=true)
 
-![img_ctm2_off](../images/iso_glass_off_f.png)
-![img_ctm2_on](../images/iso_glass_on_f.png)
-
-> If you find an issue with this pack, please open an issue on the Github repo of this resource pack
->
->[![github_issues](https://img.shields.io/github/issues/Aeldit/MC-REsource-Packs?color=red&style=for-the-badge&logo=github)](https://github.com/Aeldit/MC-Resource-Packs/issues)
->
-> If you have a suggestion, you can go on my discord server and create a post in 🗽-suggestions-forum
->
-> [![discord_badge](https://img.shields.io/discord/750243612473819188?color=7289da&label=DISCORD&logo=discord&logoColor=7289da&style=for-the-badge)](https://discord.gg/PcYPpqzhKS)
+![img_ctm2_off](https://github.com/Aeldit/MC-Resource-Packs/blob/main/images/iso_glass_off_f.png?raw=true)
+![img_ctm2_on](https://github.com/Aeldit/MC-Resource-Packs/blob/main/images/iso_glass_on_f.png?raw=true)
 
 ***
+
+> If you find an issue with this pack, please open an issue on the GitHub repo of this resource pack
+>
+>[![github_issues](https://img.shields.io/github/issues/Aeldit/MC-Resource-Packs?color=red&style=for-the-badge&logo=github)](https://github.com/Aeldit/MC-Resource-Packs/issues)
+>
+> I'd you have a suggestion, go on the discord and create a post in 🗽-suggestions-forum
+>
+> [![discord_badge](https://img.shields.io/discord/750243612473819188?color=7289da&label=DISCORD&logo=discord&logoColor=7289da&style=for-the-badge)](https://discord.gg/PcYPpqzhKS)
 
 ### Check out the rest of my projects !
 
