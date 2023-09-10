@@ -34,6 +34,8 @@ Also check my other CTM packs (click on the badges to follow the links) :
 
 ![img_ctm](https://github.com/Aeldit/MC-Resource-Packs/blob/main/images/batch_ctmf.png?raw=true)
 
+[![ctms](https://raw.githubusercontent.com/Aeldit/Aeldit/80919e090c3eb231ab53ffe60d160575811ddfcf/images/ctms-try-cozy.svg)](https://modrinth.com/mod/ctm-selector)
+
 ## Here are some visual examples of what this pack does
 
 > Left is what a 3x3 area of blocks looks like in vanilla, and right is with the texture pack
