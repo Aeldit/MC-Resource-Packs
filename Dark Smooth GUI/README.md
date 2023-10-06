@@ -23,7 +23,7 @@
 
 ## Mods compatibility
 
-|   Mods > Versions \\/  | CTM Selector | Entity Textures Features | Inventory Tabs | Iris | ItemSwapper | ModMenu |
+|   Mods → Versions ↓  | CTM Selector | Entity Textures Features | Inventory Tabs | Iris | ItemSwapper | ModMenu |
 |:--------:|:------------:|:------------------------:|:--------------:|:----:|:-----------:|:-------:|
 | 1.17.x |      ❌       |            ❌             |       ❌        |  ❌   |      ❌      |    ❌    |
 | 1.18.x |      ✅       |            ✅             |       ✅        |  ✅   |      ✅      |    ✅    |
