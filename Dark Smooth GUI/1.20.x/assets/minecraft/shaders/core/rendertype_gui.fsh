@@ -33,11 +33,5 @@ void main()
         color = vec4(0.9, 0.2, 0.2, 1);
     }
 
-    // Loading Screen Bar
-    if (color.r == 1 && color.g == 1 && color.b == 1)
-    {
-        color = vec4(0.9, 0.2, 0.2, 1);
-    }
-
     fragColor = color * ColorModulator;
 }
