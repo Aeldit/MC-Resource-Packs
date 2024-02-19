@@ -1,13 +1,13 @@
 {
 	"pack": {
-		"pack_format": 18,
+		"pack_format": 13,
 		"description": [
 			{
 				"text": "CTM Create",
 				"color": "gold"
 			},
 			{
-				"text": " MC 1.20.2",
+				"text": " MC 1.19.4",
 				"color": "dark_aqua"
 			},
 			{
