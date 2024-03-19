@@ -22,15 +22,6 @@ or
 
 </details>
 
-## Blocks done
-
-> The redstone lamp and the copper blocks are included in all their respective states (on/off, waxed, ...)
->
-> All the log/stem types are included
-
-![batch_items_img](https://github.com/Aeldit/MC-Resource-Packs/blob/main/images/batch_ctm.png?raw=true) ____ ![batch_items_img_2](https://github.com/Aeldit/MC-Resource-Packs/blob/main/images/batch_ctm_2.png?raw=true)
-
-[![ctms](https://raw.githubusercontent.com/Aeldit/Aeldit/80919e090c3eb231ab53ffe60d160575811ddfcf/images/ctms-try-cozy.svg)](https://modrinth.com/mod/ctm-selector)
 
 ## Here are some visual examples of what this pack does
 
@@ -41,6 +32,29 @@ or
 
 ![img_ctm2_off](https://github.com/Aeldit/MC-Resource-Packs/blob/main/images/iso_tinted_glass_off.png?raw=true)
 ![img_ctm2_on](https://github.com/Aeldit/MC-Resource-Packs/blob/main/images/iso_tinted_glass_on.png?raw=true)
+
+***
+
+
+## Blocks done
+
+> The redstone lamp and the copper blocks are included in all their respective states (on/off, waxed, ...)
+>
+> All the log/stem types are included
+
+<details>
+<summary>Show available blocks</summary>
+
+### Vanilla
+
+![batch_items_img](https://github.com/Aeldit/MC-Resource-Packs/blob/main/images/batch_ctm.png?raw=true) ____ ![batch_items_img_2](https://github.com/Aeldit/MC-Resource-Packs/blob/main/images/batch_ctm_2.png?raw=true)
+
+### Biomes O' Plenty
+![bop](../images/ctmof_iso/bop_trees.png)
+
+</details>
+
+[![ctms](https://raw.githubusercontent.com/Aeldit/Aeldit/80919e090c3eb231ab53ffe60d160575811ddfcf/images/ctms-try-cozy.svg)](https://modrinth.com/mod/ctm-selector)
 
 ***
 
