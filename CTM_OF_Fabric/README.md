@@ -50,7 +50,7 @@ or
 ![batch_items_img](https://github.com/Aeldit/MC-Resource-Packs/blob/main/images/batch_ctm.png?raw=true) ____ ![batch_items_img_2](https://github.com/Aeldit/MC-Resource-Packs/blob/main/images/batch_ctm_2.png?raw=true)
 
 ### Biomes O' Plenty
-![bop](../images/ctmof_iso/bop_trees.png)
+![bop](https://github.com/Aeldit/MC-Resource-Packs/blob/main/images/ctmof_iso/bop_trees.png?raw=true)
 
 </details>
 
