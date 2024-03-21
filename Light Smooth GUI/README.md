@@ -1,4 +1,4 @@
-![light_banner](https://github.com/Aeldit/MC-Resource-Packs/blob/main/images/banner_light_gui.png?raw=true)
+![light_banner](https://github.com/Aeldit/Aeldit/blob/main/banners/lg.png?raw=true)
 
 [![gimp_badge_use](https://raw.githubusercontent.com/Aeldit/Aeldit/e86a5a31fb483f7821a90ccc169540c3ff58ca2e/images/gimp-cozy.svg)](https://www.gimp.org/)
 [![light_gui_cozy](https://raw.githubusercontent.com/Aeldit/Aeldit/de3f3fc4d1636df2a148aedb09453766d021a923/images/light-gui-cozy.svg)](https://modrinth.com/resourcepack/light-smooth-gui)
