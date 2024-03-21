@@ -1,4 +1,4 @@
-![ctm_banner](https://github.com/Aeldit/MC-Resource-Packs/blob/main/images/banner_ctm_faithful_small.png?raw=true)
+![ctm_banner](https://github.com/Aeldit/Aeldit/blob/main/banners/ctm-f.png?raw=true)
 
 [![gimp_badge_use](https://raw.githubusercontent.com/Aeldit/Aeldit/e86a5a31fb483f7821a90ccc169540c3ff58ca2e/images/gimp-cozy.svg)](https://www.gimp.org/)
 [![continuity](https://raw.githubusercontent.com/Aeldit/Aeldit/b683fac4b97744f1a64dfde6f39624379e661095/images/requires-continuity-cozy.svg)](https://modrinth.com/mod/continuity)
