@@ -60,7 +60,7 @@ or
 
 ## Credits
 
-The textures from the Biomes O' Plenty mod have NOT been made by me, I simply modified them to be connected. To get the mod, go there : https://modrinth.com/mod/biomes-o-plenty
+The base textures from the Biomes O' Plenty mod have NOT been made by me, I simply modified them to be connected. To get the mod, go there : https://modrinth.com/mod/biomes-o-plenty
 
 ***
 
