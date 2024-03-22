@@ -58,6 +58,12 @@ or
 
 ***
 
+## Credits
+
+The textures from the Biomes O' Plenty mod have NOT been made by me, I simply modified them to be connected. To get the mod, go there : https://modrinth.com/mod/biomes-o-plenty
+
+***
+
 > If you find an issue with this pack, please open an issue on the GitHub repo of this resource pack
 >
 >[![github_issues](https://img.shields.io/github/issues/Aeldit/MC-Resource-Packs?color=red&style=for-the-badge&logo=github)](https://github.com/Aeldit/MC-Resource-Packs/issues)
