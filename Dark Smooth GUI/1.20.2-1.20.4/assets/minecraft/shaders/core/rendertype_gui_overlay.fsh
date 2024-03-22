@@ -15,8 +15,9 @@ void main()
         discard;
     }
 
-    /* Slot hover background color */
-    if (color.r == 255/255.0 && color.g == 255/255.0 && color.b == 255/255.0 && color.a == 128/255.0)
+    // Slot hover background color
+    // rgba(1, 1, 1, 128)
+    if (color == vec4(1, 1, 1, 0.5019607843137255))
     {
         color = vec4(1, 0, 0, color.a);
     }
