@@ -16,5 +16,5 @@ echo "$VERSIONS"
 
 for ver in $VERSIONS; do
 	cp "pack_$ver.mcmeta" pack.mcmeta
-	zip "CTM OF-Fabric $1+$ver.zip" assets/ LICENSE.txt CREDITS.txt pack.png pack.mcmeta
+	zip -r "CTM OF-Fabric $1+$ver.zip" assets/ LICENSE.txt CREDITS.txt pack.png pack.mcmeta
 done
