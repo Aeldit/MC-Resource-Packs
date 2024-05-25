@@ -1,0 +1,20 @@
+{
+    "pack": {
+        "pack_format": 32,
+        "description": [
+            {
+                "text": "Dark Smooth GUI",
+                "color": "gold"
+            },
+            {
+                "text": " MC 1.20.5/6",
+                "color": "dark_aqua"
+            },
+            {
+                "text": "\n[by Aeldit]",
+                "color": "dark_red"
+            }
+        ]
+    }
+}
+
