@@ -25,7 +25,10 @@ void main()
     }
 
     // Text color in inventory
-    if (vertexDistance > 800.0 && color.r > 0.2479 && color.r < 0.2481)
+    if ((color.r > 0.24802768 && color.r < 0.2480278)
+        && (color.g > 0.24802768 && color.g < 0.2480278)
+        && (color.b > 0.24802768 && color.b < 0.2480278)
+    )
     {
         color = vec4(1.0, 1.0, 1.0, 1.0);
     }
