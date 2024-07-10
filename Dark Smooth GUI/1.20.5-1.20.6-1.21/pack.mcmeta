@@ -1,6 +1,10 @@
 {
     "pack": {
         "pack_format": 32,
+        "supported_formats": [
+        	32,
+        	34
+        ],
         "description": [
             {
                 "text": "Dark Smooth GUI",
