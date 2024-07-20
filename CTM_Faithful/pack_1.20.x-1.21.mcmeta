@@ -3,11 +3,11 @@
         "pack_format": 15,
         "supported_formats": [
             15,
-            32
+            34
         ],
         "description": [
             {
-                "text": "CTM 64x 1.20.x",
+                "text": "CTM 64x 1.20.x-1.21",
                 "color": "gray"
             },
             {

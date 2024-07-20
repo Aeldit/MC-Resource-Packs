@@ -9,6 +9,7 @@ if [ -f "pack.mcmeta" ]; then
 	rm "pack.mcmeta"
 fi
 
+# Removes any zip archive that is still in the directory
 rm CTM\ OF-Fabric*.zip
 
 # Obtains the MC version for each file
