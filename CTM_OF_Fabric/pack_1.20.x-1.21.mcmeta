@@ -3,7 +3,7 @@
         "pack_format": 15,
         "supported_formats": [
             15,
-            32
+            34
         ],
         "description": [
             {
@@ -11,7 +11,7 @@
                 "color": "gold"
             },
             {
-                "text": " MC 1.20.x",
+                "text": " MC 1.20.x-1.21",
                 "color": "dark_aqua"
             },
             {
