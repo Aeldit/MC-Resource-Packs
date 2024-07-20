@@ -12,7 +12,7 @@ fi
 rm CTM\ OF-Fabric*.zip
 
 # Obtains the MC version for each file
-VERSIONS=$(ls *.mcmeta | cut -c 6-11)
+VERSIONS=$(ls *.mcmeta | cut -c 6- | rev | cut -c 8- | rev)
 
 for ver in $VERSIONS; do
 	cp "pack_$ver.mcmeta" pack.mcmeta
