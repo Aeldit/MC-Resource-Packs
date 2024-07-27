@@ -11,11 +11,11 @@
                 "color": "gray"
             },
             {
-                "text": " (for Faithful)",
+                "text": "\n(for Faithful)",
                 "color": "gold"
             },
             {
-                "text": "\n[by Aeldit]",
+                "text": " [by Aeldit]",
                 "color": "dark_red"
             }
         ]
