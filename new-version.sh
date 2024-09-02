@@ -15,7 +15,7 @@ PROJECT="$1"
 VERSION="$2"
 MC_VERSIONS=""
 
-# Adds double quotes around each MC version
+# Iterates over each version of the third option (each version is separated by a comma)
 export IFS=','
 for MC_VER in $3; do
 	STR_VERS=""
@@ -30,13 +30,13 @@ for MC_VER in $3; do
 	if [ "$MC_VERSIONS" = "" ]; then
 		MC_VERSIONS="$STR_VERS"
 	else
-		MC_VERSIONS="$MC_VERSIONS,\n$STR_VERS"
+		MC_VERSIONS="$MC_VERSIONS, $STR_VERS"
 	fi
 done
 
 JSON="{
     \"name\": \"$PROJECT $VERSION\",
-    \"version_number\": \"$VERSION\",
+    \"version_number\": \"$VERSION+\",
     \"changelog\": \"List of changes in this version: ...\",
     \"dependencies\":
     [
@@ -52,13 +52,14 @@ JSON="{
     \"version_type\": \"release\",
     \"loaders\":
     [
-        \"fabric\"
+        \"minecraft\"
     ],
     \"featured\": true,
+    \"status\": \"draft\",
     \"project_id\": \"uJt1qseH\",
     \"file_parts\":
     [
-        \"CTM_OF-Fabric_test+1.17.x.zip\"
+        \"test.zip\"
     ]
 }"
 
@@ -68,5 +69,5 @@ curl \
 	-H "Content-Type: multipart/form-data" \
 	-H "Authorization: $MODRINTH_TOKEN" \
 	-F "data=$JSON" \
-	-F "upload=@CTM_OF-Fabric_test+1.17.x.zip" \
+	-F "upload=@test.zip" \
 	https://api.modrinth.com/v2/version
