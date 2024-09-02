@@ -1,21 +1,21 @@
 #!/bin/sh
 
+# This script allows me to publish my 'CTM' packs automatically to modrinth
+
 # Arg 1 = '.project' file
 if [ $# -ne 1 ]; then
 	echo "Missing arguments"
 	exit 1
 fi
 
-MC_VERSIONS=""
-
 # Checks if the given file contains 4 properties
 # (by checking the number of '=' found)
 if [ $(grep -e "=" $1 | wc -l) -ne 4 ]; then
 	echo "The file '$1' does not contain the 4 required properties"
-	exit 1
+	exit 2
 fi
 
-# File parsing
+# File parsing, obtains the 4 properties required for the script to work
 CTR=0
 while IFS= read R; do
 	VAL=$(echo "$R" | cut -d"=" -f2)
@@ -29,6 +29,33 @@ while IFS= read R; do
 done <$1
 
 ls $PROJECT_DIR
+
+zip_files() {
+
+	if [ -f "$PROJECT_DIR/pack.mcmeta" ]; then
+		rm "$PROJECT_DIR/pack.mcmeta"
+	fi
+
+	# Removes any zip archive that is still in the directory
+	rm "$PROJECT_DIR/"*.zip
+
+	# Obtains the MC version from each mcmeta file
+	VERSIONS=$(ls "$PROJECT_DIR"/*.mcmeta | cut -d"/" -f2 | cut -c 6- | rev | cut -c 8- | rev)
+	echo "VERSIONS = $VERSIONS"
+
+	for VER in $VERSIONS; do
+		cp "$PROJECT_DIR/pack_$VER.mcmeta" "$PROJECT_DIR/pack.mcmeta"
+		zip -q -r "$PROJECT_DIR/CTM OF-Fabric $PROJECT_VERSION+$VER.zip" \
+			$PROJECT_DIR/assets/ $PROJECT_DIR/LICENSE.txt \
+			$PROJECT_DIR/CREDITS.txt $PROJECT_DIR/pack.png $PROJECT_DIR/pack.mcmeta
+	done
+
+	rm "$PROJECT_DIR/pack.mcmeta"
+}
+
+zip_files
+
+MC_VERSIONS=""
 
 V_1_17_X="\"1.17\", \"1.17.1\""
 V_1_18_X="\"1.18\", \"1.18.1\", \"1.18.2\""
