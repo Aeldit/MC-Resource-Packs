@@ -1,6 +1,7 @@
 #!/bin/sh
-
-# This script allows me to publish my 'CTM' packs automatically to modrinth
+###############################################################################
+#  This script allows me to publish my 'CTM' packs automatically to modrinth  #
+###############################################################################
 
 # Arg 1 = '.project' file
 if [ $# -ne 1 ]; then
@@ -63,10 +64,16 @@ publish_version() {
 		fi
 	done
 
+	if [ -f "$PROJECT_DIR/changelog.md" ]; then
+		CHANGELOG=$(cat "$PROJECT_DIR/changelog.md")
+	else
+		CHANGELOG="No changelog provided"
+	fi
+
 	JSON="{
         \"name\": \"[$MC_VERSION] $PROJECT_NAME $PROJECT_VERSION\",
         \"version_number\": \"$PROJECT_VERSION+$MC_VERSION\",
-        \"changelog\": \"List of changes in this version: ...\",
+        \"changelog\": \"$CHANGELOG\",
         \"dependencies\":
         [
             {
@@ -84,7 +91,7 @@ publish_version() {
             \"minecraft\"
         ],
         \"featured\": true,
-        \"status\": \"listed\",
+        \"status\": \"draft\",
         \"project_id\": \"$PROJECT_ID\",
         \"file_parts\":
         [
@@ -92,9 +99,8 @@ publish_version() {
         ]
     }"
 
-	#echo "$JSON"
-
-	curl --silent --output /dev/null \
+	curl \
+		-s -o /dev/null \
 		-H "Content-Type: multipart/form-data" \
 		-H "Authorization: $MODRINTH_TOKEN" \
 		-F "data=$JSON" \
@@ -104,30 +110,34 @@ publish_version() {
 	echo "Published version $MC_VERSION with range\n[$MC_VERSIONS_RANGE]\n"
 }
 
+# Searches the 'mcmeta' files in the 'PROJECT_DIR directory and obtains the
+# versions from it, then creates the zip files and publishes the version on
+# Modrinth
 zip_files() {
-
-	if [ -f "$PROJECT_DIR/pack.mcmeta" ]; then
-		rm "$PROJECT_DIR/pack.mcmeta"
+	cd "$PROJECT_DIR"
+	if [ -f "pack.mcmeta" ]; then
+		rm "pack.mcmeta"
 	fi
 
 	# Removes any zip archive that is still in the directory
-	rm "$PROJECT_DIR/"*.zip
+	rm *.zip
 
 	# Obtains the MC version from each mcmeta file
-	VERSIONS=$(ls "$PROJECT_DIR"/*.mcmeta | cut -d"/" -f2 | cut -c 6- | rev | cut -c 8- | rev)
+	VERSIONS=$(ls *.mcmeta | cut -d"/" -f2 | cut -c 6- | rev | cut -c 8- | rev)
 
 	for VER in $VERSIONS; do
-		cp "$PROJECT_DIR/pack_$VER.mcmeta" "$PROJECT_DIR/pack.mcmeta"
+		cp "pack_$VER.mcmeta" "pack.mcmeta"
 
-		ZIPFILE="$PROJECT_DIR/CTM OF-Fabric $PROJECT_VERSION+$VER.zip"
-		zip -q -r $ZIPFILE \
-			$PROJECT_DIR/assets/ $PROJECT_DIR/LICENSE.txt \
-			$PROJECT_DIR/CREDITS.txt $PROJECT_DIR/pack.png $PROJECT_DIR/pack.mcmeta
+		ZIPFILE="CTM OF-Fabric $PROJECT_VERSION+$VER.zip"
+		echo "Zipfile = $ZIPFILE"
+		zip -q -r "$ZIPFILE" \
+			assets/ LICENSE.txt CREDITS.txt pack.png pack.mcmeta
 
 		publish_version $VER "$ZIPFILE"
 	done
 
-	rm "$PROJECT_DIR/pack.mcmeta"
+	rm *.zip
+	rm "pack.mcmeta"
 }
 
 zip_files
