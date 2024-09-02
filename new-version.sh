@@ -34,6 +34,9 @@ V_1_19_X="\"1.19\", \"1.19.1\", \"1.19.2\", \"1.19.3\", \"1.19.4\""
 V_1_20_X="\"1.20\", \"1.20.1\", \"1.20.2\", \"1.20.3\", \"1.20.4\", \"1.20.5\", \"1.20.6\""
 V_1_21_X="\"1.21\", \"1.21.1\""
 
+# Takes 2 arguments :
+# - the version
+# - the file
 publish_version() {
 	MC_VERSION="$1"
 	MC_VERSIONS_RANGE=""
@@ -83,22 +86,22 @@ publish_version() {
             \"minecraft\"
         ],
         \"featured\": true,
-        \"status\": \"draft\",
+        \"status\": \"listed\",
         \"project_id\": \"$PROJECT_ID\",
         \"file_parts\":
         [
-            \"test.zip\"
+            \"$2\"
         ]
     }"
 
 	#echo "$JSON"
 
-	#curl \
-	#	-H "Content-Type: multipart/form-data" \
-	#	-H "Authorization: $MODRINTH_TOKEN" \
-	#	-F "data=$JSON" \
-	#	-F "upload=@test.zip" \
-	#	https://api.modrinth.com/v2/version
+	curl \
+		-H "Content-Type: multipart/form-data" \
+		-H "Authorization: $MODRINTH_TOKEN" \
+		-F "data=$JSON" \
+		-F "upload=@test.zip" \
+		https://api.modrinth.com/v2/version
 }
 
 zip_files() {
@@ -114,11 +117,14 @@ zip_files() {
 	VERSIONS=$(ls "$PROJECT_DIR"/*.mcmeta | cut -d"/" -f2 | cut -c 6- | rev | cut -c 8- | rev)
 
 	for VER in $VERSIONS; do
-		publish_version $VER
-		#cp "$PROJECT_DIR/pack_$VER.mcmeta" "$PROJECT_DIR/pack.mcmeta"
-		#zip -q -r "$PROJECT_DIR/CTM OF-Fabric $PROJECT_VERSION+$VER.zip" \
-		#	$PROJECT_DIR/assets/ $PROJECT_DIR/LICENSE.txt \
-		#	$PROJECT_DIR/CREDITS.txt $PROJECT_DIR/pack.png $PROJECT_DIR/pack.mcmeta
+		cp "$PROJECT_DIR/pack_$VER.mcmeta" "$PROJECT_DIR/pack.mcmeta"
+
+		ZIPFILE="$PROJECT_DIR/CTM OF-Fabric $PROJECT_VERSION+$VER.zip"
+		zip -q -r $ZIPFILE \
+			$PROJECT_DIR/assets/ $PROJECT_DIR/LICENSE.txt \
+			$PROJECT_DIR/CREDITS.txt $PROJECT_DIR/pack.png $PROJECT_DIR/pack.mcmeta
+
+		publish_version $VER "$ZIPFILE"
 	done
 
 	rm "$PROJECT_DIR/pack.mcmeta"
