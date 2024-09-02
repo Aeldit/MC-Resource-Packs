@@ -63,11 +63,9 @@ publish_version() {
 		fi
 	done
 
-	echo "Publishing version $MC_VERSION with range\n[$MC_VERSIONS_RANGE]\n"
-
 	JSON="{
-        \"name\": \"$PROJECT_NAME $PROJECT_VERSION\",
-        \"version_number\": \"$PROJECT_VERSION+\",
+        \"name\": \"[$MC_VERSION] $PROJECT_NAME $PROJECT_VERSION\",
+        \"version_number\": \"$PROJECT_VERSION+$MC_VERSION\",
         \"changelog\": \"List of changes in this version: ...\",
         \"dependencies\":
         [
@@ -96,12 +94,14 @@ publish_version() {
 
 	#echo "$JSON"
 
-	curl \
+	curl --silent --output /dev/null \
 		-H "Content-Type: multipart/form-data" \
 		-H "Authorization: $MODRINTH_TOKEN" \
 		-F "data=$JSON" \
 		-F "upload=@test.zip" \
 		https://api.modrinth.com/v2/version
+
+	echo "Published version $MC_VERSION with range\n[$MC_VERSIONS_RANGE]\n"
 }
 
 zip_files() {
