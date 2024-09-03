@@ -153,7 +153,7 @@ send_discord_announcement() {
 		-H "Content-Type:application/json" \
 		-X POST \
 		-d "{\"content\": \"$MESSAGE\"}" \
-		https://discord.com/api/webhooks/1280508752692383764/2nsRuaESd3PVHMohVX89HxVTibax_ZiNjcW1JnigRQJ9n07mYRrpvxI74NA-lVNyA1-K
+		$DISCORD_ANNOUNCEMENT_WEBHOOK
 }
 
 # Searches the 'mcmeta' files in the 'PROJECT_DIR directory and obtains the
