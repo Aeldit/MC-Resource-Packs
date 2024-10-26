@@ -16,7 +16,7 @@ if [ $(grep -e "=" $1 | wc -l) -ne 3 ]; then
 	exit 2
 fi
 
-# File parsing, obtains the 4 properties required for the script to work
+# File parsing, obtains the 3 properties required for the script to work
 CTR=0
 while IFS= read R; do
 	VAL=$(echo "$R" | cut -d"=" -f2)
@@ -44,7 +44,7 @@ V_1_17_X="\"1.17\", \"1.17.1\""
 V_1_18_X="\"1.18\", \"1.18.1\", \"1.18.2\""
 V_1_19_X="\"1.19\", \"1.19.1\", \"1.19.2\", \"1.19.3\", \"1.19.4\""
 V_1_20_X="\"1.20\", \"1.20.1\", \"1.20.2\", \"1.20.3\", \"1.20.4\", \"1.20.5\", \"1.20.6\""
-V_1_21_X="\"1.21\", \"1.21.1\""
+V_1_21_X="\"1.21\", \"1.21.1\", \"1.21.2\", \"1.21.3\""
 
 # Publishes the given version on Modrinth
 # Takes 3 arguments :
@@ -106,13 +106,15 @@ publish_version() {
         ]
     }"
 
+	# The curl command doesn't work without this dummy file, its weird
+	touch test.zip
 	curl \
-		-s -o /dev/null \
+		\
 		-H "Content-Type: multipart/form-data" \
 		-H "Authorization: $MODRINTH_TOKEN" \
 		-F "data=$JSON" \
 		-F "upload=@test.zip" \
-		https://api.modrinth.com/v2/version
+		https://api.modrinth.com/v2/version #-s -o /dev/null \
 
 	echo "Published version $MC_VERSION with range\n[$MC_VERSIONS_RANGE]\n"
 }
@@ -148,12 +150,12 @@ send_discord_announcement() {
 
 	MESSAGE="<@&1097106407972671538> $PROJECT_ROLE \`$PROJECT_VERSION\` for $VERSIONS is now available on Modrinth ($URL)"
 
-	curl \
-		-H "Accept: application/json" \
-		-H "Content-Type:application/json" \
-		-X POST \
-		-d "{\"content\": \"$MESSAGE\"}" \
-		$DISCORD_ANNOUNCEMENT_WEBHOOK
+	#curl \
+	#	-H "Accept: application/json" \
+	#	-H "Content-Type:application/json" \
+	#	-X POST \
+	#	-d "{\"content\": \"$MESSAGE\"}" \
+	#	$DISCORD_ANNOUNCEMENT_WEBHOOK
 }
 
 # Searches the 'mcmeta' files in the 'PROJECT_DIR directory and obtains the
