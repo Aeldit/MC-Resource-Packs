@@ -86,6 +86,10 @@ publish_version() {
             {
                 \"project_id\": \"1IjD5062\",
                 \"dependency_type\": \"required\"
+            },
+            {
+                \"project_id\": \"6OpnBWtt\",
+                \"dependency_type\": \"optional\"
             }
         ],
         \"game_versions\":
