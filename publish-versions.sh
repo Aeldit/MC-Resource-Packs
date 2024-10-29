@@ -107,7 +107,6 @@ publish_version() {
 
 	# The curl command doesn't work without this dummy file, its weird
 	touch test.zip
-	echo $MODRINTH_TOKEN
 	curl \
 		\
 		-H "Content-Type: multipart/form-data" \
