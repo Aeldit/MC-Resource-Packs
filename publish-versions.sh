@@ -98,7 +98,6 @@ publish_version() {
             \"minecraft\"
         ],
         \"featured\": true,
-        \"status\": \"draft\",
         \"project_id\": \"$PROJECT_ID\",
         \"file_parts\":
         [
@@ -108,12 +107,13 @@ publish_version() {
 
 	# The curl command doesn't work without this dummy file, its weird
 	touch test.zip
+	echo $MODRINTH_TOKEN
 	curl \
 		\
 		-H "Content-Type: multipart/form-data" \
 		-H "Authorization: $MODRINTH_TOKEN" \
 		-F "data=$JSON" \
-		-F "upload=@test.zip" \
+		-F "upload=@$2" \
 		https://api.modrinth.com/v2/version #-s -o /dev/null \
 
 	echo "Published version $MC_VERSION with range\n[$MC_VERSIONS_RANGE]\n"
