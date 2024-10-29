@@ -4,7 +4,7 @@
 ###############################################################################
 
 # Arg 1 = '.project' file
-if [ $# -ne 1 ]; then
+if [ $# -lt 1 ]; then
 	echo "Missing arguments"
 	exit 1
 fi
@@ -150,12 +150,12 @@ send_discord_announcement() {
 
 	MESSAGE="<@&1097106407972671538> $PROJECT_ROLE \`$PROJECT_VERSION\` for $VERSIONS is now available on Modrinth ($URL)"
 
-	#curl \
-	#	-H "Accept: application/json" \
-	#	-H "Content-Type:application/json" \
-	#	-X POST \
-	#	-d "{\"content\": \"$MESSAGE\"}" \
-	#	$DISCORD_ANNOUNCEMENT_WEBHOOK
+	curl \
+		-H "Accept: application/json" \
+		-H "Content-Type:application/json" \
+		-X POST \
+		-d "{\"content\": \"$MESSAGE\"}" \
+		$DISCORD_ANNOUNCEMENT_WEBHOOK
 }
 
 # Searches the 'mcmeta' files in the 'PROJECT_DIR directory and obtains the
@@ -190,10 +190,14 @@ zip_files() {
 		publish_version "$VER" "$ZIPFILE" "$CHANGELOG"
 	done
 
-	rm *.zip
+	# If we want to keep the zip files
+	echo "$1"
+	if [ $1 -ne 2 ]; then
+		rm *.zip
+	fi
 	rm "pack.mcmeta"
 
 	send_discord_announcement "$VERSIONS"
 }
 
-zip_files
+zip_files $#
