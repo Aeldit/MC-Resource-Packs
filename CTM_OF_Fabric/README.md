@@ -47,10 +47,15 @@ or
 
 ### Vanilla
 
-![batch_items_img](https://github.com/Aeldit/MC-Resource-Packs/blob/main/images/batch_ctm.png?raw=true) ____ ![batch_items_img_2](https://github.com/Aeldit/MC-Resource-Packs/blob/main/images/batch_ctm_2.png?raw=true)
+![blocks](https://github.com/Aeldit/MC-Resource-Packs/blob/main/images/ctm/vanilla.png?raw=true)
+
+![logs](https://github.com/Aeldit/MC-Resource-Packs/blob/main/images/ctm/logs.png?raw=true)
 
 ### Biomes O' Plenty
-![bop](https://github.com/Aeldit/MC-Resource-Packs/blob/main/images/ctmof_iso/bop_trees.png?raw=true)
+![bop](https://github.com/Aeldit/MC-Resource-Packs/blob/main/images/ctm/bop.png?raw=true)
+
+### Versecraft
+![versecraft](https://github.com/Aeldit/MC-Resource-Packs/blob/main/images/ctm/versecraft.png?raw=true)
 
 </details>
 
