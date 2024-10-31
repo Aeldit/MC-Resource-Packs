@@ -1,5 +1,12 @@
-The textures used for Biomes O' Plenty are from the mod Biomes O' Plenty
+The base textures used for Biomes O' Plenty are from the mod Biomes O' Plenty
 and are NOT my work.
 I simply edited them to make them connected, using the textures of the mod
 
 The mod can be found here : https://modrinth.com/mod/biomes-o-plenty
+
+The base textures used for Versecraft are from the mod Versecraft
+and are NOT my work.
+I simply edited them to make them connected, using the textures of the mod
+
+The mod can be found here : https://modrinth.com/mod/versecraft
+
