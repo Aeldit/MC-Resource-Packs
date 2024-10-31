@@ -67,6 +67,8 @@ or
 
 The base textures from the Biomes O' Plenty mod have NOT been made by me, I simply modified them to be connected. To get the mod, go there : https://modrinth.com/mod/biomes-o-plenty
 
+The base textures from the Versecraft mod have NOT been made by me, I simply modified them to be connected. To get the mod, go there : https://modrinth.com/mod/versecraft
+
 ***
 
 > If you find an issue with this pack, please open an issue on the GitHub repo of this resource pack
