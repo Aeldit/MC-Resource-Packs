@@ -11,12 +11,12 @@
                 "color": "gold"
             },
             {
-                "text": " MC 1.20.5/6",
-                "color": "dark_aqua"
+                "text": " [by Aeldit]",
+                "color": "dark_red"
             },
             {
-                "text": "\n[by Aeldit]",
-                "color": "dark_red"
+                "text": "\nMC 1.20.5/6 - 1.21.x",
+                "color": "dark_aqua"
             }
         ]
     }
