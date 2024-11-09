@@ -2,8 +2,8 @@
     "pack": {
         "pack_format": 32,
         "supported_formats": [
-        	32,
-        	34
+            32,
+            57
         ],
         "description": [
             {
