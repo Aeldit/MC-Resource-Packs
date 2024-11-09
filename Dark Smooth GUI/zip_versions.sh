@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ $# != 1 ]; then
+if [ $# -ne 1 ]; then
 	echo "Version not specified; Aborting"
 	exit 1
 fi
