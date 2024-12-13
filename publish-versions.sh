@@ -112,7 +112,7 @@ publish_version() {
 	# The curl command doesn't work without this dummy file, its weird
 	touch test.zip
 	curl \
-		\
+		--fail-with-body \
 		-H "Content-Type: multipart/form-data" \
 		-H "Authorization: $MODRINTH_TOKEN" \
 		-F "data=$JSON" \
