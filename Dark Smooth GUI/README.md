@@ -26,15 +26,21 @@
 
 | Mods ↓ MC Versions → | 1.17.x | 1.18.x | 1.19.x | 1.20.x | 1.21.x |
 |:-----------------:|:------:|:------:|:------:|:------:|:------:|
+| Axiom | ❌ | ❌ | ❌ | ✅ | ✅ |
 | CTM Selector | ❌ | ✅ | ✅ | ✅ | ✅ |
+| EMI | ❌ | ❌ | ✅ | ✅ | ✅ |
 | ETF | ❌ | ✅ | ✅ | ✅ | ✅ |
-| Inventory Tabs | ❌ | ✅ | ✅ | ✅ | ✅ |
-| Iris | ❌ | ✅ | ✅ | ✅ | ✅ |
+| Inventory Tabs | ❌ | ✅ | ✅ | ✅ (1.21-1.20.1) | ❌ |
+| Iris | ❌ | ✅ | ✅ | ✅ | ➖ |
 | ItemSwapper | ❌ | ✅ | ✅ | ✅ | ✅ |
 | ModMenu | ❌ | ✅ | ✅ | ✅ | ✅ |
 | Sodium | ❌ | ✅ | ✅ | ✅ | ✅ |
-| Axiom | ❌ | ❌ | ❌ | ✅ | ✅ |
-| EMI | ❌ | ❌ | ✅ | ✅ | ✅ |
+
+> ❌ Mod not supported for this version
+>
+> ✅ Mod supported for this version
+>
+> ➖ Mod not needed for this version
 
 ***
 
