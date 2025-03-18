@@ -116,6 +116,7 @@ def main(
             "1.21.2",
             "1.21.3",
             "1.21.4",
+            "1.21.5",
         ],
     }
     for mc_version, version, file_name in files:
