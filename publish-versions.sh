@@ -122,45 +122,6 @@ publish_version() {
 	echo "Published version $MC_VERSION with range\n[$MC_VERSIONS_RANGE]\n"
 }
 
-# Sends a message in my discord's announcements channel with the changelog of
-# the version
-# Arg 1 = versions
-send_discord_announcement() {
-	VERSIONS=""
-
-	# Puts the versions in the form of a list separated by commas
-	for VER in $1; do
-		if [ "$VERSIONS" = "" ]; then
-			VERSIONS="\`$VER\`"
-		else
-			VERSIONS="$VERSIONS, \`$VER\`"
-		fi
-	done
-
-	# Use the correct project role ping (Can be '@CTM', '@CTM Faithful' or '@CTM Create')
-	case "$PROJECT_ID" in
-	"$ID_CTM") PROJECT_ROLE="<@&1109052269594427432>" ;;
-	"$ID_CTM_F") PROJECT_ROLE="<@&1109052339286978641>" ;;
-	"$ID_CTM_C") PROJECT_ROLE="<@&1137806476031828078>" ;;
-	esac
-
-	# Puts the correct URL
-	case "$PROJECT_ID" in
-	"$ID_CTM") URL="https://modrinth.com/resourcepack/ctm-of-fabric/versions" ;;
-	"$ID_CTM_F") URL="https://modrinth.com/resourcepack/ctm-faithful/versions" ;;
-	"$ID_CTM_C") URL="https://modrinth.com/resourcepack/ctm-create/versions" ;;
-	esac
-
-	MESSAGE="<@&1097106407972671538> $PROJECT_ROLE \`$PROJECT_VERSION\` for $VERSIONS is now available on Modrinth ($URL)"
-
-	curl \
-		-H "Accept: application/json" \
-		-H "Content-Type:application/json" \
-		-X POST \
-		-d "{\"content\": \"$MESSAGE\"}" \
-		$DISCORD_ANNOUNCEMENT_WEBHOOK
-}
-
 # Searches the 'mcmeta' files in the 'PROJECT_DIR directory and obtains the
 # versions from it, then creates the zip files and publishes the version on
 # Modrinth
@@ -199,8 +160,6 @@ zip_files() {
 		rm *.zip
 	fi
 	rm "pack.mcmeta"
-
-	send_discord_announcement "$VERSIONS"
 }
 
 zip_files $#
