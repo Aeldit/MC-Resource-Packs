@@ -80,7 +80,6 @@ def add_mods_files(mc_version: str, zip_file: ZipFile) -> None:
             add_files_to_zip_rec(
                 f"common/{mod}", zip_file, "common/", "assets/"
             )
-
     return None
 
 
