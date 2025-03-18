@@ -1,10 +1,13 @@
 #!/bin/env python3
 
 import glob
+import json
 import sys
-from os import listdir, remove, walk
+from os import environ, listdir, remove, walk
 from os.path import join, relpath
 from zipfile import ZIP_DEFLATED, ZipFile
+
+import requests
 
 
 def add_files_to_zip_rec(
@@ -90,22 +93,122 @@ def base_to_zip_file(mc_version: str, zip_file: ZipFile):
     return None
 
 
+def publish(
+    mc_version: str,
+    version: str,
+    file: str,
+    changelog: str,
+    versions_range: list[str],
+):
+    print(
+        requests.post(
+            "https://api.modrinth.com/v2/version",
+            headers={"Authorization": environ["MODRINTH_TOKEN"]},
+            data={
+                "data": json.dumps(
+                    {
+                        "name": f"[{mc_version}] Dark Smooth GUI {version}",
+                        "version_number": f"{version}+{mc_version}",
+                        "changelog": changelog,
+                        "dependencies": [
+                            {
+                                "project_id": "N6n5dqoA",  # Axiom
+                                "dependency_type": "optional",
+                            },
+                            {
+                                "project_id": "6OpnBWtt",  # CTMS
+                                "dependency_type": "optional",
+                            },
+                            {
+                                "project_id": "fRiHVvU7",  # EMI
+                                "dependency_type": "optional",
+                            },
+                            {
+                                "project_id": "BVzZfTc1",  # ETF
+                                "dependency_type": "optional",
+                            },
+                            {
+                                "project_id": "VD1aynYU",  # InvetoryTabs
+                                "dependency_type": "optional",
+                            },
+                            {
+                                "project_id": "YL57xq9U",  # Iris
+                                "dependency_type": "optional",
+                            },
+                            {
+                                "project_id": "RPOSBQgq",  # ItemSwapper
+                                "dependency_type": "optional",
+                            },
+                            {
+                                "project_id": "mOgUt4GM",  # Modmenu
+                                "dependency_type": "optional",
+                            },
+                            {
+                                "project_id": "AANobbMI",  # Sodium
+                                "dependency_type": "optional",
+                            },
+                        ],
+                        "game_versions": versions_range,
+                        "version_type": "release",
+                        "loaders": ["minecraft"],
+                        "featured": True,
+                        "project_id": "3BPM3cU5",
+                        "file_parts": [file],
+                    }
+                )
+            },
+            files={file: open(file, "rb")},
+        ).text
+    )
+    return None
+
+
 def main() -> None:
     args = sys.argv
     if len(args) != 2:
         print("Version not specified; Aborting")
         exit(1)
 
+    version = args[1]
+
     # Remove previously generated Zip files
     for zip_file in glob.glob("Dark Smooth GUI*.zip"):
         remove(zip_file)
 
-    for mc_version in (dir for dir in listdir(".") if dir.startswith("1.")):
-        with ZipFile(
-            f"Dark Smooth GUI {args[1]}+{mc_version}.zip", "w", ZIP_DEFLATED
-        ) as zip_file:
+    files = []
+    for mc_version in sorted(
+        dir for dir in listdir(".") if dir.startswith("1.")
+    ):
+        file = f"Dark Smooth GUI {version}+{mc_version}.zip"
+        with ZipFile(file, "w", ZIP_DEFLATED) as zip_file:
             base_to_zip_file(mc_version, zip_file)
+            files.append((mc_version, version, file))
+            print(mc_version)
 
+    ranges = {
+        "1.17.x": ["1.17", "1.17.1"],
+        "1.18.x": ["1.18", "1.18.1", "1.18.2"],
+        "1.19.x": ["1.19", "1.19.1", "1.19.2", "1.19.3", "1.19.4"],
+        "1.20-1.20.1": ["1.20", "1.20.1"],
+        "1.20.2-1.20.4": ["1.20.2", "1.20.3", "1.20.4"],
+        "1.20.5-1.21.x": [
+            "1.20.5",
+            "1.20.6",
+            "1.21",
+            "1.21.1",
+            "1.21.2",
+            "1.21.3",
+            "1.21.4",
+        ],
+    }
+    for mc_version, version, file in files:
+        publish(
+            mc_version,
+            version,
+            file,
+            "Add new Axiom GUI textures + fix some issues",
+            ranges[mc_version],
+        )
     return None
 
 
