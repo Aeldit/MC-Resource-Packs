@@ -162,6 +162,7 @@ def publish(
     return None
 
 
+# TODO: Update the pack's modrinth body page
 def main() -> None:
     args = sys.argv
     if len(args) != 2:
