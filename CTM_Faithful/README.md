@@ -33,7 +33,7 @@ or
 
 > Copper blocks are present in both normal and waxed states
 
-![img_ctm](https://github.com/Aeldit/Aeldit/blob/main/ctm/ctm_faithful.png?raw=true)
+![img_ctm](../images/batch_ctmf.png)
 
 </details>
 
