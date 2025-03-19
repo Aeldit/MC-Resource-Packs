@@ -22,16 +22,20 @@ or
 |       1.18.x        |     ✅     |
 |       1.19.x        |     ✅     |
 |       1.20.x        |     ✅     |
+|       1.21.x        |     ✅     |
 
 </details>
 
-## Blocks done
+
+
+<details>
+<summary>✅ Show available blocks</summary>
 
 > Copper blocks are present in both normal and waxed states
 
-![img_ctm](https://github.com/Aeldit/MC-Resource-Packs/blob/main/images/batch_ctmf.png?raw=true)
+![img_ctm](https://github.com/Aeldit/Aeldit/blob/main/ctm/ctm_faithful.png?raw=true)
 
-[![ctms](https://raw.githubusercontent.com/Aeldit/Aeldit/80919e090c3eb231ab53ffe60d160575811ddfcf/images/ctms-try-cozy.svg)](https://modrinth.com/mod/ctm-selector)
+</details>
 
 ## Here are some visual examples of what this pack does
 
@@ -42,6 +46,9 @@ or
 
 ![img_ctm2_off](https://github.com/Aeldit/MC-Resource-Packs/blob/main/images/iso_glass_off_f.png?raw=true)
 ![img_ctm2_on](https://github.com/Aeldit/MC-Resource-Packs/blob/main/images/iso_glass_on_f.png?raw=true)
+
+
+[![ctms](https://raw.githubusercontent.com/Aeldit/Aeldit/80919e090c3eb231ab53ffe60d160575811ddfcf/images/ctms-try-cozy.svg)](https://modrinth.com/mod/ctm-selector)
 
 ***
 
