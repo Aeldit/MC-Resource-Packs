@@ -5,7 +5,7 @@ import glob
 import json
 import sys
 from os import environ, listdir, remove, walk
-from os.path import isfile, join, relpath
+from os.path import isfile, join
 from zipfile import ZIP_DEFLATED, ZipFile
 
 import requests
@@ -93,7 +93,7 @@ def main(
 
         with ZipFile(file_name, "w", ZIP_DEFLATED) as zip_file:
             zip_file.write("CREDITS.txt")
-            zip_file.write("LICENSE.txt")
+            zip_file.write("LICENSE")
             zip_file.write("pack.png")
             zip_file.write(mcmeta_file, "pack.mcmeta")
             add_files_to_zip_rec("assets", zip_file)

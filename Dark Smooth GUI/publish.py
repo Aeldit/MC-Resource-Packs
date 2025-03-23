@@ -84,7 +84,7 @@ def add_mods_files(mc_version: str, zip_file: ZipFile) -> None:
 
 
 def base_to_zip_file(mc_version: str, zip_file: ZipFile):
-    zip_file.write("LICENSE.txt")
+    zip_file.write("LICENSE")
     zip_file.write("pack.png")
     zip_file.write(f"{mc_version}/pack.mcmeta", "pack.mcmeta")
     add_files_to_zip_rec(f"{mc_version}/assets", zip_file, f"{mc_version}/")
