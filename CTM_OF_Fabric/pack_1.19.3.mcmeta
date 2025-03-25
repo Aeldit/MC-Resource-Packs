@@ -1,0 +1,19 @@
+{
+	"pack": {
+		"pack_format": 12,
+		"description": [
+			{
+				"text": "CTM OF-Fabric",
+				"color": "gold"
+			},
+			{
+				"text": " MC 1.19.2",
+				"color": "dark_aqua"
+			},
+			{
+				"text": "\n[by Aeldit]",
+				"color": "dark_red"
+			}
+		]
+	}
+}

@@ -103,6 +103,7 @@ def main(
     ranges = {
         "1.17.x": ["1.17", "1.17.1"],
         "1.18.x": ["1.18", "1.18.1", "1.18.2"],
+        "1.19-1.19.2": ["1.19", "1.19.1", "1.19.2"],
         "1.20.x-1.21.x": [
             "1.20",
             "1.20.1",
@@ -134,7 +135,7 @@ def main(
 
 if __name__ == "__main__":
     args = sys.argv
-    if len(args) != 4:
+    if len(args) < 3:
         print("Version not specified; Aborting")
         exit(1)
 
@@ -160,5 +161,6 @@ if __name__ == "__main__":
         else "CTM Create"
     )
     version = args[2]
+    changelog = args[3] if len(args) == 4 else "No changelog provided"
 
-    main(project_dir, project_id, project_name, version, args[3])
+    main(project_dir, project_id, project_name, version, changelog)
