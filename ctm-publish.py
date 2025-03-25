@@ -35,35 +35,61 @@ def publish(
     file: str,
     changelog: str,
     versions_range: list[str],
-):
-    print(
-        requests.post(
-            "https://api.modrinth.com/v2/version",
-            headers={"Authorization": environ["MODRINTH_TOKEN"]},
-            data={
-                "data": json.dumps(
-                    {
-                        "name": f"[{mc_version}] {project_name} {version}",
-                        "version_number": f"{version}+{mc_version}",
-                        "changelog": changelog,
-                        "dependencies": [
-                            {
-                                "project_id": "1IjD5062",  # Continuity
-                                "dependency_type": "required",
-                            }
-                        ],
-                        "game_versions": versions_range,
-                        "version_type": "release",
-                        "loaders": ["minecraft"],
-                        "featured": True,
-                        "project_id": project_id,
-                        "file_parts": [file],
-                    }
-                )
-            },
-            files={file: open(file, "rb")},
-        ).text
+) -> None:
+    req = requests.post(
+        "https://api.modrinth.com/v2/version",
+        headers={"Authorization": environ["MODRINTH_TOKEN"]},
+        data={
+            "data": json.dumps(
+                {
+                    "name": f"[{mc_version}] {project_name} {version}",
+                    "version_number": f"{version}+{mc_version}",
+                    "changelog": changelog,
+                    "dependencies": [
+                        {
+                            "project_id": "1IjD5062",  # Continuity
+                            "dependency_type": "required",
+                        }
+                    ],
+                    "game_versions": versions_range,
+                    "version_type": "release",
+                    "loaders": ["minecraft"],
+                    "featured": True,
+                    "project_id": project_id,
+                    "file_parts": [file],
+                }
+            )
+        },
+        files={file: open(file, "rb")},
     )
+
+    if req.status_code == 200:
+        print("Versions uploaded successfully")
+    else:
+        print(
+            f"Couldn't upload version with file {file}.\n"
+            f"Error code: {req.status_code}.\n"
+            f"Error response: {req.text if req is not None else {}}\n"
+        )
+    return None
+
+
+def update_body(project_id: str) -> None:
+    with open("README.md", "r") as rf:
+        body = rf.read()
+        req = requests.patch(
+            f"https://api.modrinth.com/v2/project/{project_id}",
+            headers={"Authorization": environ["MODRINTH_TOKEN"]},
+            json={"body": body},
+        )
+        if req.status_code == 204:
+            print("Body synced successfully")
+        else:
+            print(
+                "Couldn't sync the body.\n"
+                f"Error code: {req.status_code}.\n"
+                f"Error response: {req.text if req is not None else {}}\n"
+            )
     return None
 
 
@@ -93,7 +119,7 @@ def main(
 
         with ZipFile(file_name, "w", ZIP_DEFLATED) as zip_file:
             zip_file.write("CREDITS.txt")
-            zip_file.write("../LICENSE")
+            zip_file.write("../LICENSE", "LICENSE")
             zip_file.write("pack.png")
             zip_file.write(mcmeta_file, "pack.mcmeta")
             add_files_to_zip_rec("assets", zip_file)
@@ -128,15 +154,17 @@ def main(
             project_id,
             file_name,
             changelog,
-            ranges[mc_version] if mc_version in ranges.keys() else mc_version,
+            ranges[mc_version] if mc_version in ranges.keys() else [mc_version],
         )
+
+    update_body(project_id)
     return None
 
 
 if __name__ == "__main__":
     args = sys.argv
     if len(args) < 3:
-        print("Version not specified; Aborting")
+        print("Invalid number of arguments; Aborting")
         exit(1)
 
     project_dir = (
