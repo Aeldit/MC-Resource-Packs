@@ -1,11 +1,8 @@
 ![ctm_banner](https://github.com/Aeldit/Aeldit/blob/main/banners/ctm.png?raw=true)
 
-[![gimp_badge_use](https://raw.githubusercontent.com/Aeldit/Aeldit/e86a5a31fb483f7821a90ccc169540c3ff58ca2e/images/gimp-cozy.svg)](https://www.gimp.org/)
 [![continuity](https://raw.githubusercontent.com/Aeldit/Aeldit/b683fac4b97744f1a64dfde6f39624379e661095/images/requires-continuity-cozy.svg)](https://modrinth.com/mod/continuity)
 or
 [![optifine](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/requires/optifine_vector.svg)](https://optifine.net/home)
-
-[<img alt="modrinth" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/modrinth_vector.svg">](https://modrinth.com/resourcepack/ctm-of-fabric)
 
 ## Adds connected textures to the game (works with Optifine and Continuity)
 
@@ -16,8 +13,7 @@ or
 |:---------------------:|:----------:|
 |       1.17.x        |     ✅     |
 |       1.18.x        |     ✅     |
-|     1.19-1.19.3     |     ❌     |
-|       1.19.4        |     ✅     |
+|       1.19.x        |     ✅     |
 |       1.20.x        |     ✅     |
 
 </details>
@@ -65,9 +61,9 @@ or
 
 ## Credits
 
-The base textures from the Biomes O' Plenty mod have NOT been made by me, I simply modified them to be connected. To get the mod, go there : https://modrinth.com/mod/biomes-o-plenty
+The base textures from the Biomes O' Plenty mod have not been made by me, I simply modified them to be connected. To get the mod, go there : https://modrinth.com/mod/biomes-o-plenty
 
-The base textures from the Versecraft mod have NOT been made by me, I simply modified them to be connected. To get the mod, go there : https://modrinth.com/mod/versecraft
+The base textures from the Versecraft mod have not been made by me, I simply modified them to be connected. To get the mod, go there : https://modrinth.com/mod/versecraft
 
 ***
 
