@@ -209,7 +209,6 @@ def main(version: str, changelog: str) -> None:
         with ZipFile(file, "w", ZIP_DEFLATED) as zip_file:
             base_to_zip_file(mc_version, zip_file)
             files.append((mc_version, version, file))
-            print(mc_version)
 
     ranges = {
         "1.17.x": ["1.17", "1.17.1"],
