@@ -101,66 +101,73 @@ def publish(
     changelog: str,
     versions_range: list[str],
 ):
-    print(
-        requests.post(
-            "https://api.modrinth.com/v2/version",
-            headers={"Authorization": environ["MODRINTH_TOKEN"]},
-            data={
-                "data": json.dumps(
-                    {
-                        "name": f"[{mc_version}] Dark Smooth GUI {version}",
-                        "version_number": f"{version}+{mc_version}",
-                        "changelog": changelog,
-                        "dependencies": [
-                            {
-                                "project_id": "N6n5dqoA",  # Axiom
-                                "dependency_type": "optional",
-                            },
-                            {
-                                "project_id": "6OpnBWtt",  # CTMS
-                                "dependency_type": "optional",
-                            },
-                            {
-                                "project_id": "fRiHVvU7",  # EMI
-                                "dependency_type": "optional",
-                            },
-                            {
-                                "project_id": "BVzZfTc1",  # ETF
-                                "dependency_type": "optional",
-                            },
-                            {
-                                "project_id": "VD1aynYU",  # InvetoryTabs
-                                "dependency_type": "optional",
-                            },
-                            {
-                                "project_id": "YL57xq9U",  # Iris
-                                "dependency_type": "optional",
-                            },
-                            {
-                                "project_id": "RPOSBQgq",  # ItemSwapper
-                                "dependency_type": "optional",
-                            },
-                            {
-                                "project_id": "mOgUt4GM",  # Modmenu
-                                "dependency_type": "optional",
-                            },
-                            {
-                                "project_id": "AANobbMI",  # Sodium
-                                "dependency_type": "optional",
-                            },
-                        ],
-                        "game_versions": versions_range,
-                        "version_type": "release",
-                        "loaders": ["minecraft"],
-                        "featured": True,
-                        "project_id": PROJECT_ID,
-                        "file_parts": [file],
-                    }
-                )
-            },
-            files={file: open(file, "rb")},
-        ).text
+    req = requests.post(
+        "https://api.modrinth.com/v2/version",
+        headers={"Authorization": environ["MODRINTH_TOKEN"]},
+        data={
+            "data": json.dumps(
+                {
+                    "name": f"[{mc_version}] Dark Smooth GUI {version}",
+                    "version_number": f"{version}+{mc_version}",
+                    "changelog": changelog,
+                    "dependencies": [
+                        {
+                            "project_id": "N6n5dqoA",  # Axiom
+                            "dependency_type": "optional",
+                        },
+                        {
+                            "project_id": "6OpnBWtt",  # CTMS
+                            "dependency_type": "optional",
+                        },
+                        {
+                            "project_id": "fRiHVvU7",  # EMI
+                            "dependency_type": "optional",
+                        },
+                        {
+                            "project_id": "BVzZfTc1",  # ETF
+                            "dependency_type": "optional",
+                        },
+                        {
+                            "project_id": "VD1aynYU",  # InvetoryTabs
+                            "dependency_type": "optional",
+                        },
+                        {
+                            "project_id": "YL57xq9U",  # Iris
+                            "dependency_type": "optional",
+                        },
+                        {
+                            "project_id": "RPOSBQgq",  # ItemSwapper
+                            "dependency_type": "optional",
+                        },
+                        {
+                            "project_id": "mOgUt4GM",  # Modmenu
+                            "dependency_type": "optional",
+                        },
+                        {
+                            "project_id": "AANobbMI",  # Sodium
+                            "dependency_type": "optional",
+                        },
+                    ],
+                    "game_versions": versions_range,
+                    "version_type": "release",
+                    "loaders": ["minecraft"],
+                    "featured": True,
+                    "project_id": PROJECT_ID,
+                    "file_parts": [file],
+                }
+            )
+        },
+        files={file: open(file, "rb")},
     )
+
+    if req.status_code == 204:
+        print(f"Successfully uploaded version {version}+{mc_version}")
+    else:
+        print(
+            f"Couldn't update the version {version}+{mc_version}.\n"
+            f"Error code: {req.status_code}.\n"
+            f"Error response: {req.text if req is not None else {}}\n"
+        )
     return None
 
 
@@ -183,14 +190,13 @@ def update_body() -> None:
     return None
 
 
-def main() -> None:
-    args = sys.argv
-    if len(args) != 2:
-        print("Version not specified; Aborting")
-        exit(1)
+def get_existing_versions() -> list[dict]:
+    return requests.get(
+        f"https://api.modrinth.com/v2/project/{PROJECT_ID}/version"
+    ).json()
 
-    version = args[1]
 
+def main(version: str, changelog: str) -> None:
     # Remove previously generated Zip files
     for zip_file in glob.glob("Dark Smooth GUI*.zip"):
         remove(zip_file)
@@ -221,18 +227,30 @@ def main() -> None:
             "1.21.4",
         ],
     }
+    existing_versions = tuple(
+        ev["version_number"] for ev in get_existing_versions()
+    )
+
     for mc_version, version, file in files:
-        publish(
-            mc_version,
-            version,
-            file,
-            "Add new Axiom GUI textures + fix some issues",
-            ranges[mc_version],
-        )
+        if f"{version}+{mc_version}" in existing_versions:
+            print(
+                f"Not uploading version {version}+{mc_version} because it is already on modrinth"
+            )
+            continue
+
+        publish(mc_version, version, file, changelog, ranges[mc_version])
 
     update_body()
     return None
 
 
 if __name__ == "__main__":
-    main()
+    args = sys.argv
+    if len(args) != 2:
+        print("Version not specified; Aborting")
+        exit(1)
+
+    version = args[1]
+    changelog = args[2] if len(args) == 3 else "No changelog provided"
+
+    main(version, changelog)

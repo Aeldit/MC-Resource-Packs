@@ -64,7 +64,7 @@ def publish(
     )
 
     if req.status_code == 200:
-        print("Versions uploaded successfully")
+        print(f"Successfully uploaded version {version}+{mc_version}")
     else:
         print(
             f"Couldn't upload version with file {file}.\n"
@@ -91,6 +91,12 @@ def update_body(project_id: str) -> None:
                 f"Error response: {req.text if req is not None else {}}\n"
             )
     return None
+
+
+def get_existing_versions(project_id: str) -> list[dict]:
+    return requests.get(
+        f"https://api.modrinth.com/v2/project/{project_id}/version"
+    ).json()
 
 
 def main(
@@ -146,7 +152,17 @@ def main(
             "1.21.5",
         ],
     }
+    existing_versions = tuple(
+        ev["version_number"] for ev in get_existing_versions(project_id)
+    )
+
     for mc_version, version, file_name in files:
+        if f"{version}+{mc_version}" in existing_versions:
+            print(
+                f"Not uploading version {version}+{mc_version} because it is already on modrinth"
+            )
+            continue
+
         publish(
             mc_version,
             version,

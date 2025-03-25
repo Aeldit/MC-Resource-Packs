@@ -1,18 +1,15 @@
 ![dark_banner](https://github.com/Aeldit/Aeldit/blob/main/banners/dg.png?raw=true)
 
-[![gimp_badge_use](https://raw.githubusercontent.com/Aeldit/Aeldit/e86a5a31fb483f7821a90ccc169540c3ff58ca2e/images/gimp-cozy.svg)](https://www.gimp.org/)
-[![dark_gui_cozy](https://raw.githubusercontent.com/Aeldit/Aeldit/52eb60c8c1220593ea859bcd59a5b0a2d8f2cf7a/images/dark-gui-cozy.svg)](https://modrinth.com/resourcepack/dark-smooth-gui)
-
 <details>
 <summary>🎴 Show available versions</summary>
 
 | Supported MC Version  | Up to date |
 |:---------------------:|:----------:|
-|        1.17.x         |     ❌     |
-|        1.18.x         |     ❌     |
+|        1.17.x         |     ✅     |
+|        1.18.x         |     ✅     |
 |        1.19.x         |     ✅     |
-|      1.20-1.20.1      |     ✅     |
-|     1.20.2-1.20.6     |     ✅     |
+|        1.20.x         |     ✅     |
+|        1.21.x         |     ✅     |
 
 </details>
 
@@ -20,7 +17,7 @@
 
 > Adds a smooth dark GUI to every container and screen in the game
 
-![example_image](../images/main_menu_dark.png)
+![example_image](https://github.com/Aeldit/MC-Resource-Packs/blob/main/images/main_menu_dark.png?raw=true)
 
 ## Mods compatibility
 
