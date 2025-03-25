@@ -9,6 +9,8 @@ from zipfile import ZIP_DEFLATED, ZipFile
 
 import requests
 
+PROJECT_ID = "3BPM3cU5"
+
 
 def add_files_to_zip_rec(
     root_dir: str, zip_file: ZipFile, prefix: str, arcname: str = ""
@@ -151,7 +153,7 @@ def publish(
                         "version_type": "release",
                         "loaders": ["minecraft"],
                         "featured": True,
-                        "project_id": "3BPM3cU5",
+                        "project_id": PROJECT_ID,
                         "file_parts": [file],
                     }
                 )
@@ -162,7 +164,25 @@ def publish(
     return None
 
 
-# TODO: Update the pack's modrinth body page
+def update_body() -> None:
+    with open("README.md", "r") as rf:
+        body = rf.read()
+        req = requests.patch(
+            f"https://api.modrinth.com/v2/project/{PROJECT_ID}",
+            headers={"Authorization": environ["MODRINTH_TOKEN"]},
+            json={"body": body},
+        )
+        if req.status_code == 204:
+            print("Body synced successfully")
+        else:
+            print(
+                "Couldn't sync the body.\n"
+                f"Error code: {req.status_code}.\n"
+                f"Error response: {req.text if req is not None else {}}\n"
+            )
+    return None
+
+
 def main() -> None:
     args = sys.argv
     if len(args) != 2:
@@ -209,6 +229,8 @@ def main() -> None:
             "Add new Axiom GUI textures + fix some issues",
             ranges[mc_version],
         )
+
+    update_body()
     return None
 
 
