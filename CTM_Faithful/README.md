@@ -1,32 +1,14 @@
 ![ctm_banner](https://github.com/Aeldit/Aeldit/blob/main/banners/ctm-f.png?raw=true)
 
-[![gimp_badge_use](https://raw.githubusercontent.com/Aeldit/Aeldit/e86a5a31fb483f7821a90ccc169540c3ff58ca2e/images/gimp-cozy.svg)](https://www.gimp.org/)
 [![continuity](https://raw.githubusercontent.com/Aeldit/Aeldit/b683fac4b97744f1a64dfde6f39624379e661095/images/requires-continuity-cozy.svg)](https://modrinth.com/mod/continuity)
 or
 [![optifine](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/requires/optifine_vector.svg)](https://optifine.net/home)
-
-[<img alt="modrinth" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/modrinth_vector.svg">](https://modrinth.com/resourcepack/ctm-faithful)
 
 ## Adds connected textures to the game but with Faithful textures (works with Optifine and Continuity)
 
 > This pack adds connected textures to blocks like gold block, sea lanterns (see gallery), but with Faithful 64x textures.
 >
 > The pack is based on their textures so here is the link to comply with their license : <https://faithfulpack.net>
-
-<details>
-<summary>🎴 Show available versions</summary>
-
-| Supported MC Version  | Up to date |
-|:---------------------:|:----------:|
-|       1.17.x        |     ✅     |
-|       1.18.x        |     ✅     |
-|       1.19.x        |     ✅     |
-|       1.20.x        |     ✅     |
-|       1.21.x        |     ✅     |
-
-</details>
-
-
 
 <details>
 <summary>✅ Show available blocks</summary>

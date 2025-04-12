@@ -1,11 +1,8 @@
 ![ctm_banner](https://github.com/Aeldit/Aeldit/blob/main/banners/ctm-create.png?raw=true)
 
-[![gimp_badge_use](https://raw.githubusercontent.com/Aeldit/Aeldit/e86a5a31fb483f7821a90ccc169540c3ff58ca2e/images/gimp-cozy.svg)](https://www.gimp.org/)
 [![continuity](https://raw.githubusercontent.com/Aeldit/Aeldit/b683fac4b97744f1a64dfde6f39624379e661095/images/requires-continuity-cozy.svg)](https://modrinth.com/mod/continuity)
 or
 [![optifine](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/requires/optifine_vector.svg)](https://optifine.net/home)
-
-[<img alt="modrinth" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/modrinth_vector.svg">](https://modrinth.com/resourcepack/ctm-create)
 
 ## Adds connected textures with the textures of the Create mod (Continuity or Optifine are required for the resource pack to work)
 
@@ -13,20 +10,6 @@ or
 >
 > The pack is based on their textures so here is the link to comply with their license :
 > <https://modrinth.com/mod/create-fabric>
-
-<details>
-<summary>🎴 Show available versions</summary>
-
-| Supported MC Version  | Up to date |
-|:---------------------:|:----------:|
-|       1.17.x        |     ❌     |
-|       1.18.x        |     ✅     |
-|       1.19.2        |     ✅     |
-|       1.19.3        |     ❌     |
-|       1.19.4        |     ❌     |
-|       1.20.x        |     ✅     |
-
-</details>
 
 ## Blocks done
 

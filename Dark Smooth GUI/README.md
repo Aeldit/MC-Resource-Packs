@@ -1,21 +1,8 @@
 ![dark_banner](https://github.com/Aeldit/Aeldit/blob/main/banners/dg.png?raw=true)
 
-<details>
-<summary>🎴 Show available versions</summary>
-
-| Supported MC Version  | Up to date |
-|:---------------------:|:----------:|
-|        1.17.x         |     ✅     |
-|        1.18.x         |     ✅     |
-|        1.19.x         |     ✅     |
-|        1.20.x         |     ✅     |
-|        1.21.x         |     ✅     |
-
-</details>
-
 ***
 
-> Adds a smooth dark GUI to every container and screen in the game
+Adds a smooth dark GUI to every container and screen in the game
 
 ![example_image](https://github.com/Aeldit/MC-Resource-Packs/blob/main/images/main_menu_dark.png?raw=true)
 
