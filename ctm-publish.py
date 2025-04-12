@@ -183,13 +183,6 @@ if __name__ == "__main__":
         print("Invalid number of arguments; Aborting")
         exit(1)
 
-    project_dir = (
-        "CTM_OF_Fabric"
-        if args[1] == "ctm"
-        else "CTM_Faithful"
-        if args[1] == "ctmf"
-        else "CTM_Create"
-    )
     project_id = (
         "uJt1qseH"
         if args[1] == "ctm"
@@ -197,14 +190,25 @@ if __name__ == "__main__":
         if args[1] == "ctmf"
         else "3RaBwrJ0"
     )
-    project_name = (
-        "CTM OF-Fabric"
-        if args[1] == "ctm"
-        else "CTM Faithful"
-        if args[1] == "ctmf"
-        else "CTM Create"
-    )
-    version = args[2]
-    changelog = args[3] if len(args) == 4 else "No changelog provided"
 
-    main(project_dir, project_id, project_name, version, changelog)
+    if "bo" in args:
+        update_body(project_id)
+    else:
+        project_dir = (
+            "CTM_OF_Fabric"
+            if args[1] == "ctm"
+            else "CTM_Faithful"
+            if args[1] == "ctmf"
+            else "CTM_Create"
+        )
+        project_name = (
+            "CTM OF-Fabric"
+            if args[1] == "ctm"
+            else "CTM Faithful"
+            if args[1] == "ctmf"
+            else "CTM Create"
+        )
+        version = args[2]
+        changelog = args[3] if len(args) == 4 else "No changelog provided"
+
+        main(project_dir, project_id, project_name, version, changelog)
