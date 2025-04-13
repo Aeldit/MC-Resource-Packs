@@ -250,7 +250,10 @@ if __name__ == "__main__":
         print("Version not specified; Aborting")
         exit(1)
 
-    version = args[1]
-    changelog = args[2] if len(args) == 3 else "No changelog provided"
+    if "bo" in args:
+        update_body()
+    else:
+        version = args[1]
+        changelog = args[2] if len(args) == 3 else "No changelog provided"
 
-    main(version, changelog)
+        main(version, changelog)

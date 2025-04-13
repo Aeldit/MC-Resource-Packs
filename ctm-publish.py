@@ -74,8 +74,16 @@ def publish(
     return None
 
 
-def update_body(project_id: str) -> None:
-    with open("README.md", "r") as rf:
+def get_existing_versions(project_id: str) -> list[dict]:
+    return requests.get(
+        f"https://api.modrinth.com/v2/project/{project_id}/version"
+    ).json()
+
+
+def update_body(project_id: str, project_dir: str | None = None) -> None:
+    path = "README.md" if project_dir is None else f"{project_dir}/README.md"
+
+    with open(path, "r") as rf:
         body = rf.read()
         req = requests.patch(
             f"https://api.modrinth.com/v2/project/{project_id}",
@@ -91,12 +99,6 @@ def update_body(project_id: str) -> None:
                 f"Error response: {req.text if req is not None else {}}\n"
             )
     return None
-
-
-def get_existing_versions(project_id: str) -> list[dict]:
-    return requests.get(
-        f"https://api.modrinth.com/v2/project/{project_id}/version"
-    ).json()
 
 
 def main(
@@ -183,6 +185,13 @@ if __name__ == "__main__":
         print("Invalid number of arguments; Aborting")
         exit(1)
 
+    project_dir = (
+        "CTM_OF_Fabric"
+        if args[1] == "ctm"
+        else "CTM_Faithful"
+        if args[1] == "ctmf"
+        else "CTM_Create"
+    )
     project_id = (
         "uJt1qseH"
         if args[1] == "ctm"
@@ -192,15 +201,8 @@ if __name__ == "__main__":
     )
 
     if "bo" in args:
-        update_body(project_id)
+        update_body(project_id, project_dir)
     else:
-        project_dir = (
-            "CTM_OF_Fabric"
-            if args[1] == "ctm"
-            else "CTM_Faithful"
-            if args[1] == "ctmf"
-            else "CTM_Create"
-        )
         project_name = (
             "CTM OF-Fabric"
             if args[1] == "ctm"
