@@ -101,12 +101,27 @@ def update_body(project_id: str, project_dir: str | None = None) -> None:
     return None
 
 
+def send_discord_announcement(changelog: str, rp_role: str) -> None:
+    requests.post(
+        environ["DISCORDWH"],
+        data=json.dumps(
+            {
+                "content": f"<@&{environ['DISCORD_ROLE_RPU']}> <@&{rp_role}> A new version of Dark Smooth GUI is available on Modrinth\n\n{changelog}"
+            }
+        ),
+        headers={"Content-Type": "application/json"},
+        timeout=1.0,
+    )
+    return None
+
+
 def main(
     project_dir: str,
     project_id: str,
     project_name: str,
     version: str,
     changelog: str,
+    rp_role: str,
 ) -> None:
     # Remove previously generated Zip files
     for zip_file in glob.glob(f"{project_dir}/{project_name}*.zip"):
@@ -176,6 +191,7 @@ def main(
         )
 
     update_body(project_id)
+    send_discord_announcement(changelog, rp_role)
     return None
 
 
@@ -212,5 +228,12 @@ if __name__ == "__main__":
         )
         version = args[2]
         changelog = args[3] if len(args) == 4 else "No changelog provided"
+        rp_role = (
+            environ["DISCORD_ROLE_CTM"]
+            if args[1] == "ctm"
+            else environ["DISCORD_ROLE_CTMF"]
+            if args[1] == "ctmf"
+            else environ["DISCORD_ROLE_CTMC"]
+        )
 
-        main(project_dir, project_id, project_name, version, changelog)
+        main(project_dir, project_id, project_name, version, changelog, rp_role)

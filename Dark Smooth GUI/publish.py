@@ -198,33 +198,16 @@ def get_existing_versions() -> list[dict]:
 
 
 def send_discord_announcement(changelog: str) -> None:
-    try:
-        resp = requests.post(
-            environ["DISCORDWH"],
-            data=json.dumps(
-                {
-                    "content": f"<@&{environ['DISCORD_ROLE_RPU']}> <@&{environ['DISCORD_ROLE_DGUI']}> A new version of Dark Smooth GUI is available on Modrinth\n\n{changelog}"
-                }
-            ),
-            headers={"Content-Type": "application/json"},
-            timeout=1.0,
-        )
-        # Returns an HTTPError if an error has occurred during the process (used for debugging).
-        resp.raise_for_status()
-    except requests.exceptions.HTTPError:
-        print("An HTTP Error occurred")
-        pass
-    except requests.exceptions.ConnectionError:
-        print("An Error Connecting to the API occurred")
-        pass
-    except requests.exceptions.Timeout:
-        print("A Timeout Error occurred")
-        pass
-    except requests.exceptions.RequestException:
-        print("An Unknown Error occurred")
-        pass
-    else:
-        print(resp.status_code)
+    requests.post(
+        environ["DISCORDWH"],
+        data=json.dumps(
+            {
+                "content": f"<@&{environ['DISCORD_ROLE_RPU']}> <@&{environ['DISCORD_ROLE_DGUI']}> A new version of Dark Smooth GUI is available on Modrinth\n\n{changelog}"
+            }
+        ),
+        headers={"Content-Type": "application/json"},
+        timeout=1.0,
+    )
     return None
 
 
