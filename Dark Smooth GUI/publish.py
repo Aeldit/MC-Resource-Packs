@@ -8,6 +8,7 @@ from os.path import join, relpath
 from zipfile import ZIP_DEFLATED, ZipFile
 
 import requests
+from flask import Flask
 
 PROJECT_ID = "3BPM3cU5"
 
@@ -196,6 +197,37 @@ def get_existing_versions() -> list[dict]:
     ).json()
 
 
+def send_discord_announcement(changelog: str) -> None:
+    try:
+        resp = requests.post(
+            environ["DISCORDWH"],
+            data=json.dumps(
+                {
+                    "content": f"<@&{environ['DISCORD_ROLE_RPU']}> <@&{environ['DISCORD_ROLE_DGUI']}> A new version of Dark Smooth GUI is available on Modrinth\n\n{changelog}"
+                }
+            ),
+            headers={"Content-Type": "application/json"},
+            timeout=1.0,
+        )
+        # Returns an HTTPError if an error has occurred during the process (used for debugging).
+        resp.raise_for_status()
+    except requests.exceptions.HTTPError:
+        print("An HTTP Error occurred")
+        pass
+    except requests.exceptions.ConnectionError:
+        print("An Error Connecting to the API occurred")
+        pass
+    except requests.exceptions.Timeout:
+        print("A Timeout Error occurred")
+        pass
+    except requests.exceptions.RequestException:
+        print("An Unknown Error occurred")
+        pass
+    else:
+        print(resp.status_code)
+    return None
+
+
 def main(version: str, changelog: str) -> None:
     # Remove previously generated Zip files
     for zip_file in glob.glob("Dark Smooth GUI*.zip"):
@@ -241,6 +273,7 @@ def main(version: str, changelog: str) -> None:
         publish(mc_version, version, file, changelog, ranges[mc_version])
 
     update_body()
+    send_discord_announcement(changelog)
     return None
 
 
